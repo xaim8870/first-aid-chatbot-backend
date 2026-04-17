@@ -11,5 +11,6 @@ cahtbot-venv/
 .idea/
 
 data/eda/
+data/raw/
 data/knowledge_faiss/*.index
 data/knowledge_faiss/*.pkl

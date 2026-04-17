@@ -1,13 +1,11 @@
-#backend/schemas/chat.py
 from pydantic import BaseModel
-from typing import Optional
+from typing import Literal
 
 class ChatRequest(BaseModel):
     query: str
-    language: str = "en"        # en | ur
-    age_group: str = "general" # adult | child | infant | general
-    session_id: str            # REQUIRED for memory
-
+    language: Literal["en", "ur"] = "en"
+    age_group: Literal["adult", "child", "infant", "general"] = "general"
+    session_id: str
 
 class ChatResponse(BaseModel):
     intent: str
