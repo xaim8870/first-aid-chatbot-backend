@@ -1,0 +1,90 @@
+{
+  "intent_counts": {
+    "bleeding": 1286,
+    "allergic_reaction": 800,
+    "poisoning": 578,
+    "vertigo": 498,
+    "fainting": 323,
+    "seizure": 299,
+    "burns": 266,
+    "fracture": 216,
+    "shock": 188,
+    "choking": 103,
+    "hypothermia": 92,
+    "unconsciousness": 77,
+    "heat_stroke": 47,
+    "snake_bite": 3
+  },
+  "examples": {
+    "fracture": [
+      "A fracture is the breaking of a bone. Symptoms include intense pain when the limb is moved, swelling, bruising, difficulty moving, abnormal movement, deformation, shortening of member. Immobilize the ",
+      "A fracture is the breaking of a bone. Symptoms include intense pain when the limb is moved, swelling, bruising, difficulty moving, abnormal movement, deformation, shortening of member. Immobilize the ",
+      "A fracture is the breaking of a bone."
+    ],
+    "heat_stroke": [
+      "Call for emergency medical help: Spinal cord injuries can be life-threatening, so it's important to call for emergency medical help immediately. Do not move the person if you suspect they have a spina",
+      "Heatstroke is the rise in body temperature above 39C. It is the result of prolonged exposure to high temperature without simultaneous administration of fluids. High temperature can cause brain damage ",
+      "Heatstroke is the rise in body temperature above 39C. It is the result of prolonged exposure to high temperature without simultaneous administration of fluids. High temperature can cause brain damage "
+    ],
+    "hypothermia": [
+      "Call for emergency medical help: Spinal cord injuries can be life-threatening, so it's important to call for emergency medical help immediately. Do not move the person if you suspect they have a spina",
+      "DO NOT touch with bare hands electrically conductive objects or liquids that they've been submerged in. Turn off the electricity. The high voltage current can be transmitted for several meters around ",
+      "Call for emergency medical help immediately. Lightning strikes can cause serious injuries and even death, so it is important to seek medical attention as soon as possible. If you are with someone who "
+    ],
+    "bleeding": [
+      "Call for emergency medical help: Spinal cord injuries can be life-threatening, so it's important to call for emergency medical help immediately. Do not move the person if you suspect they have a spina",
+      "To treat a bleeding caused by a skin wound begin with washed hands. Wash the wound with normal saline or plenty of clean water with a sterile gauze, cotton or a clean piece of cloth. Gently remove any",
+      "First control bleeding. Tie a piece of cloth tight around the amputated limb to stop or downsize the amound of bleeding. Immediately transport the injured to the hospital. Transport along the amputate"
+    ],
+    "allergic_reaction": [
+      "Try to identify what is causing the allergic reaction. If you can identify the trigger, avoid it as much as possible. Wash the affected area with mild soap and cool water. This can help remove any rem",
+      "Try to identify what is causing the allergic reaction. If you can identify the trigger, avoid it as much as possible. Wash the affected area with mild soap and cool water. This can help remove any rem",
+      "Antihistamines, decongestants, and corticosteroids can help relieve allergy symptoms. Your doctor may prescribe these medications or recommend over-the-counter options."
+    ],
+    "fainting": [
+      "Call for an ambulance. Ask him/her if he/she has an adrenaline injection with him/her. If him/her has, inject it into the arm or thigh. Loosen any tie or belt. In case of loss of consciousness, bring ",
+      "Hypothermia is the drop in body temperature below 35C. It is the result of exposure to a cold environment or immersion in cold water. The risk of hypothermia increases when there is co-existing trauma",
+      "Heatstroke is the rise in body temperature above 39C. It is the result of prolonged exposure to high temperature without simultaneous administration of fluids. High temperature can cause brain damage "
+    ],
+    "burns": [
+      "First you must identify the degree of burn. First degree burns are superficial and are characterized by pain, redness, increased temperature, small blisters may also appear. Superficial burns heal aut",
+      "Sun burns are considered first degree burns. Medical assistance must be sought for superficial and partial-thickness burns involving the face and genitals. To treat a sun burn pour plenty of cool wate",
+      "To treat a burn, cool the burn under cool running water for at least 10 minutes. Avoid using ice. Cover the burn with a sterile, non-stick bandage or cloth. For pain, take over-the-counter pain reliev"
+    ],
+    "unconsciousness": [
+      "DO NOT touch with bare hands electrically conductive objects or liquids that they've been submerged in. Turn off the electricity. The high voltage current can be transmitted for several meters around ",
+      "To treat choking in an adult or child, stand behind the person and wrap your arms around their waist. Make a fist with one hand and place it just above the person’s navel (belly button). Grasp the fis",
+      "For choking, perform the Heimlich maneuver on adults and children by standing behind the person, making a fist above the navel, and giving quick, upward thrusts. For infants, use back blows and chest "
+    ],
+    "vertigo": [
+      "Heatstroke is the rise in body temperature above 39C. It is the result of prolonged exposure to high temperature without simultaneous administration of fluids. High temperature can cause brain damage ",
+      "Heatstroke is the rise in body temperature above 39C. It is the result of prolonged exposure to high temperature without simultaneous administration of fluids. High temperature can cause brain damage ",
+      "Heat Exhaustion is the rise in body temperature above 39C. It is the result of prolonged exposure to high temperature without simultaneous administration of fluids. High temperature can cause brain da"
+    ],
+    "seizure": [
+      "A seizure is a sudden and uncontrollable electrical disturbance in the brain that can cause a variety of physical symptoms, such as shaking, convulsions, and loss of consciousness. If you witness some",
+      "It's important to stay as calm as possible during a seizure, as anxiety or stress can make the seizure worse. If possible, move away from any potential hazards or dangerous objects. If you are unable ",
+      "If you have a seizure it's important that you seek medical assistance. Your doctor will evaluate your situation and prescribe the appropriate medicine and dosage. Do not use any antiepileptic drugs or"
+    ],
+    "choking": [
+      "A seizure is a sudden and uncontrollable electrical disturbance in the brain that can cause a variety of physical symptoms, such as shaking, convulsions, and loss of consciousness. If you witness some",
+      "Call Poisoning Help Center (GR: +30 2107793777). DO NOT try to vomit in case of poisoning by strong caustic substances such as: turpentine, corrosives, petroleum derivatives, etching, caustic potash, ",
+      "Call medical help immediatley. Monitor the person's vital signs (breathing, pulse, and level of consciousness). If the person falls unconsious, move their body sideways to avoid airway obstruction in "
+    ],
+    "poisoning": [
+      "If you are bitten by a snake, get medical help the immediately. Try not to accelerate your heartbeat, because in case of a poisonous bite the poison will spread faster. Try to remember the the color a",
+      "To treat a chemical burn, first remove any contaminated clothing. Rinse the affected area with cool running water for at least 20 minutes to remove the chemical. Avoid scrubbing the area. Cover the bu",
+      "If you get a chemical burn, remove any contaminated clothing and rinse the affected area with cool running water for at least 20 minutes. Avoid scrubbing the area. Cover the burn with a sterile, non-s"
+    ],
+    "shock": [
+      "Treat allergic or anaphylactic shock by administering an epinephrine injection (EpiPen) immediately. Call emergency services. Lay the person flat and elevate their legs to improve blood flow. Keep the",
+      "Symptoms of an allergy can include itching, hives, sneezing, runny nose, and watery eyes. Anaphylaxis, a severe allergic reaction, can cause difficulty breathing, swelling of the face or throat, rapid",
+      "Shingles is a painful rash that develops on one side of the face or body. The rash forms blisters that typically scab over in 7 to 10 days and clear up within 2 to 4 weeks. Most commonly, the rash occ"
+    ],
+    "snake_bite": [
+      "To treat a snake bite, keep the affected limb immobilized and at or below heart level. Do not attempt to suck out the venom or apply ice. Seek emergency medical attention immediately. If possible, not",
+      "For a snake bite, immobilize the affected limb and keep it below heart level. Avoid cutting the wound or using a tourniquet. Seek emergency medical help immediately for antivenom and appropriate treat",
+      "A snake bite requires immediate medical attention. Immobilize the limb and keep it at or below heart level. Avoid cutting the wound, sucking out the venom, or applying ice. Seek emergency care for ant"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "total_records": 75688,
+  "question": {
+    "valid": 75680,
+    "null": 8,
+    "empty": 0,
+    "missing": 0
+  },
+  "answer": {
+    "valid": 75640,
+    "null": 0,
+    "empty": 48,
+    "missing": 0
+  },
+  "combined": {
+    "both_valid": 75632,
+    "only_question_valid": 48,
+    "only_answer_valid": 8,
+    "neither_valid": 0
+  }
+}

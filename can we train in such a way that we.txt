@@ -1,0 +1,799 @@
+can we train in such a way that we get both global metrics and per class metrics saved in the csv and we make all those plots, and in this classification task do we need to compute mAP metrics, i will provide you all the code to do this:
+train.py:
+# training/train.py
+import os
+import numpy as np
+import pandas as pd
+import torch
+from tqdm import tqdm
+from utils.config import CFG
+from training.metrics import per_class_metrics, overall_metrics, mAP
+
+
+def r3(x):
+    if isinstance(x, (list, tuple, np.ndarray)):
+        return [float(f"{v:.3f}") for v in x]
+    return float(f"{x:.3f}")
+
+
+# -------------------------------------------------------------
+# TRAIN ONE EPOCH
+# -------------------------------------------------------------
+def train_one_epoch(model, train_loader, criterion, optimizer, scaler, epoch, history):
+    model.train()
+    total_loss = 0.0
+    preds_all, labels_all, prob_all = [], [], []
+
+    loop = tqdm(train_loader, desc=f"Epoch {epoch+1} [Train]", leave=False)
+
+    for imgs, labels in loop:
+        imgs = imgs.to(CFG.device, non_blocking=True)
+        labels = labels.to(CFG.device, non_blocking=True)
+
+        optimizer.zero_grad(set_to_none=True)
+
+        # ✅ NEW AMP API (future-proof)
+        with torch.amp.autocast(
+            device_type="cuda",
+            enabled=(CFG.device == "cuda" and CFG.use_amp)
+        ):
+            logits = model(imgs)
+            loss = criterion(logits, labels)
+
+        # ---- safety guard (important for long runs)
+        if not torch.isfinite(loss):
+            print("⚠️ Non-finite loss detected, skipping batch")
+            continue
+
+        if scaler is not None and scaler.is_enabled():
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            loss.backward()
+            optimizer.step()
+
+        total_loss += loss.item() * imgs.size(0)
+
+        probs = torch.softmax(logits, dim=1)
+        preds = probs.argmax(dim=1)
+
+        prob_all.append(probs.detach().cpu().numpy())
+        preds_all.append(preds.detach().cpu().numpy())
+        labels_all.append(labels.detach().cpu().numpy())
+
+    prob_all = np.concatenate(prob_all, axis=0)
+    preds_all = np.concatenate(preds_all, axis=0)
+    labels_all = np.concatenate(labels_all, axis=0)
+
+    return compute_metrics(
+        total_loss,
+        preds_all,
+        labels_all,
+        prob_all,
+        len(train_loader.dataset),
+        "train",
+        history
+    )
+
+
+# -------------------------------------------------------------
+# VALIDATION
+# -------------------------------------------------------------
+def validate_one_epoch(model, val_loader, criterion, epoch, history):
+    model.eval()
+    total_loss = 0.0
+    preds_all, labels_all, prob_all = [], [], []
+
+    with torch.no_grad():
+        loop = tqdm(val_loader, desc=f"Epoch {epoch+1} [Val]", leave=False)
+
+        for imgs, labels in loop:
+            imgs = imgs.to(CFG.device, non_blocking=True)
+            labels = labels.to(CFG.device, non_blocking=True)
+
+            with torch.amp.autocast(
+                device_type="cuda",
+                enabled=(CFG.device == "cuda" and CFG.use_amp)
+            ):
+                logits = model(imgs)
+                loss = criterion(logits, labels)
+
+            total_loss += loss.item() * imgs.size(0)
+
+            probs = torch.softmax(logits, dim=1)
+            preds = probs.argmax(dim=1)
+
+            prob_all.append(probs.detach().cpu().numpy())
+            preds_all.append(preds.detach().cpu().numpy())
+            labels_all.append(labels.detach().cpu().numpy())
+
+    prob_all = np.concatenate(prob_all, axis=0)
+    preds_all = np.concatenate(preds_all, axis=0)
+    labels_all = np.concatenate(labels_all, axis=0)
+
+    return compute_metrics(
+        total_loss,
+        preds_all,
+        labels_all,
+        prob_all,
+        len(val_loader.dataset),
+        "val",
+        history
+    )
+
+
+# -------------------------------------------------------------
+# METRICS + CSV LOGGER
+# -------------------------------------------------------------
+def compute_metrics(total_loss, y_pred, y_true, y_prob, n_samples, phase, history):
+    avg_loss = total_loss / n_samples
+
+    cls = per_class_metrics(y_true, y_pred, CFG.num_classes)
+    overall = overall_metrics(y_true, y_pred, CFG.num_classes)
+    map_mean, ap_per_class = mAP(y_true, y_prob, CFG.num_classes)
+
+    history[f"{phase}_loss"].append(avg_loss)
+    history[f"{phase}_acc"].append(overall["acc"])
+    history[f"{phase}_precision"].append(cls["precision"].tolist())
+    history[f"{phase}_recall"].append(cls["recall"].tolist())
+    history[f"{phase}_f1"].append(cls["f1"].tolist())
+    history[f"{phase}_ap"].append(ap_per_class.tolist())
+    history[f"{phase}_mAP"].append(map_mean)
+
+    # -------- CSV (epoch × class)
+    save_path = os.path.join(CFG.save_dir, "metrics_log_per_class.csv")
+    class_names = getattr(
+        CFG,
+        "class_names",
+        [f"class_{i}" for i in range(CFG.num_classes)]
+    )
+
+    epochs_done = len(history["train_loss"])
+    rows = []
+
+    for e in range(epochs_done):
+        for cid in range(CFG.num_classes):
+            row = {
+                "epoch": e + 1,
+                "class_id": cid,
+                "class_name": class_names[cid],
+                "train_loss": r3(history["train_loss"][e]),
+                "val_loss": r3(history["val_loss"][e]) if e < len(history["val_loss"]) else None,
+                "train_precision": r3(history["train_precision"][e][cid]),
+                "train_recall": r3(history["train_recall"][e][cid]),
+                "train_f1": r3(history["train_f1"][e][cid]),
+                "train_AP": r3(history["train_ap"][e][cid]),
+            }
+
+            if e < len(history["val_precision"]):
+                row.update({
+                    "val_precision": r3(history["val_precision"][e][cid]),
+                    "val_recall": r3(history["val_recall"][e][cid]),
+                    "val_f1": r3(history["val_f1"][e][cid]),
+                    "val_AP": r3(history["val_ap"][e][cid]),
+                })
+
+            rows.append(row)
+
+    pd.DataFrame(rows).to_csv(save_path, index=False)
+
+    return (
+        r3(avg_loss),
+        r3(overall["acc"]),
+        r3(overall["f1_macro"]),
+        r3(overall["precision_macro"]),
+        r3(overall["recall_macro"]),
+        r3(map_mean),
+        r3(overall["f1_weighted"]),
+    )
+metrics.py:
+# training/metrics.py
+import numpy as np
+from sklearn.metrics import (
+    accuracy_score, precision_recall_fscore_support,
+    average_precision_score
+)
+
+def per_class_metrics(y_true, y_pred, num_classes):
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+
+    p, r, f1, _ = precision_recall_fscore_support(
+        y_true, y_pred, labels=list(range(num_classes)),
+        average=None, zero_division=0
+    )
+
+    acc_per_class = []
+    for c in range(num_classes):
+        mask = (y_true == c)
+        acc_per_class.append(accuracy_score(y_true[mask], y_pred[mask]) if mask.sum() else 0.0)
+
+    return {
+        "precision": p,
+        "recall": r,
+        "f1": f1,
+        "accuracy": np.array(acc_per_class),
+    }
+
+def overall_metrics(y_true, y_pred, num_classes):
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+
+    acc = accuracy_score(y_true, y_pred)
+
+    p_macro, r_macro, f1_macro, _ = precision_recall_fscore_support(
+        y_true, y_pred, labels=list(range(num_classes)),
+        average="macro", zero_division=0
+    )
+    p_weighted, r_weighted, f1_weighted, _ = precision_recall_fscore_support(
+        y_true, y_pred, labels=list(range(num_classes)),
+        average="weighted", zero_division=0
+    )
+
+    return {
+        "acc": acc,
+        "precision_macro": p_macro,
+        "recall_macro": r_macro,
+        "f1_macro": f1_macro,
+        "precision_weighted": p_weighted,
+        "recall_weighted": r_weighted,
+        "f1_weighted": f1_weighted,
+    }
+
+def average_precision_per_class(y_true, y_prob, num_classes):
+    """
+    AP (Average Precision) per class for multi-class classification using OvR.
+    y_prob: shape (N, C) softmax probabilities
+    """
+    y_true = np.asarray(y_true)
+    y_prob = np.asarray(y_prob)
+
+    ap = []
+    for c in range(num_classes):
+        yt = (y_true == c).astype(int)
+        ap.append(average_precision_score(yt, y_prob[:, c]))
+    return np.array(ap)
+
+def mAP(y_true, y_prob, num_classes):
+    ap = average_precision_per_class(y_true, y_prob, num_classes)
+    return ap.mean(), ap
+datasets.py:
+import os
+import numpy as np
+import torch
+from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
+from torchvision import transforms
+from PIL import Image
+from utils.config import CFG
+
+# -------------------------
+# TRANSFORMS
+# -------------------------
+train_tfms = transforms.Compose([
+    transforms.Resize((CFG.img_size, CFG.img_size)),
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(10),
+    transforms.ToTensor(),
+    transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
+])
+
+val_tfms = transforms.Compose([
+    transforms.Resize((CFG.img_size, CFG.img_size)),
+    transforms.ToTensor(),
+    transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
+])
+
+
+# -------------------------
+# DATASET
+# -------------------------
+class BrainTumorDataset(Dataset):
+    def __init__(self, images_dir, transform=None, use_cache=True):
+        self.transform = transform
+        self.samples = []
+        self.classes = sorted(
+            [d for d in os.listdir(images_dir) if os.path.isdir(os.path.join(images_dir, d))]
+        )
+        self.class_to_idx = {cls: idx for idx, cls in enumerate(self.classes)}
+        self.use_cache = use_cache
+        self.cache = {} if use_cache else None
+
+        for cls in self.classes:
+            folder = os.path.join(images_dir, cls)
+            for img_name in os.listdir(folder):
+                if img_name.lower().endswith((".jpg", ".jpeg", ".png")):
+                    self.samples.append(
+                        (os.path.join(folder, img_name), self.class_to_idx[cls])
+                    )
+
+        print(f"[BrainTumorDataset] Loaded {len(self.samples)} samples from {images_dir}")
+
+    def __len__(self):
+        return len(self.samples)
+
+    def _load_image(self, path):
+        img = Image.open(path).convert("RGB")
+        img.load()
+        return img
+
+    def __getitem__(self, idx):
+        path, label = self.samples[idx]
+
+        if self.use_cache:
+            if path in self.cache:
+                img = self.cache[path]
+            else:
+                img = self._load_image(path)
+                self.cache[path] = img
+        else:
+            img = self._load_image(path)
+
+        if self.transform:
+            img = self.transform(img)
+
+        return img, torch.tensor(label, dtype=torch.long)
+
+    # -------------------------
+    # CLASS COUNTS (for balancing)
+    # -------------------------
+    def get_class_counts(self):
+        counts = np.zeros(len(self.classes), dtype=np.int64)
+        for _, y in self.samples:
+            counts[y] += 1
+        return counts
+
+
+# -------------------------
+# DATALOADERS
+# -------------------------
+def get_dataloaders():
+    train_ds = BrainTumorDataset(
+        os.path.join(CFG.data_root, "train", "images"),
+        transform=train_tfms,
+        use_cache=True
+    )
+
+    val_ds = BrainTumorDataset(
+        os.path.join(CFG.data_root, "val", "images"),
+        transform=val_tfms,
+        use_cache=False
+    )
+
+    workers = min(4, os.cpu_count() or 1)
+
+    # -------- BALANCED SAMPLER --------
+    class_counts = train_ds.get_class_counts()
+    class_weights = 1.0 / (class_counts + 1e-6)
+
+    sample_weights = [class_weights[y] for _, y in train_ds.samples]
+
+    sampler = WeightedRandomSampler(
+        weights=torch.DoubleTensor(sample_weights),
+        num_samples=len(sample_weights),
+        replacement=True
+    )
+
+    train_loader = DataLoader(
+        train_ds,
+        batch_size=CFG.batch_size,
+        sampler=sampler,
+        shuffle=False,
+        num_workers=0,          # 🔥 MUST BE 0 ON WINDOWS
+        pin_memory=False,
+        persistent_workers=False
+    )
+
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=CFG.batch_size,
+        shuffle=False,
+        num_workers=0,          # 🔥 MUST BE 0 ON WINDOWS
+        pin_memory=False,
+        persistent_workers=False
+    )
+
+
+    return train_loader, val_loader, train_ds.classes, class_counts
+main.py:
+import os
+import numpy as np
+import torch
+
+from data.datasets import get_dataloaders
+from models.yolo_swin_model import YOLOv12SwinClassifier
+from training.train import train_one_epoch, validate_one_epoch
+from utils.config import CFG
+from utils.config import set_seed
+set_seed(CFG.seed)
+
+from utils.plots import (
+    plot_confusion_matrix,
+    plot_training_curves,
+    confidence_curves
+)
+
+from training.metrics import per_class_metrics, overall_metrics
+
+
+def ensure_dir(path: str):
+    os.makedirs(path, exist_ok=True)
+
+
+def compute_class_weights_from_counts(class_counts: np.ndarray):
+    """
+    Inverse-frequency weights for CrossEntropyLoss.
+    Normalized so mean weight ~ 1.0 (stable training).
+    """
+    class_counts = np.asarray(class_counts, dtype=np.float32)
+    w = 1.0 / (class_counts + 1e-6)
+    w = w / w.mean()
+    return torch.tensor(w, dtype=torch.float32)
+
+
+def evaluate_on_loader(model, loader):
+    """
+    Returns:
+      y_true: (N,)
+      y_pred: (N,)
+      y_prob: (N, C) softmax probabilities
+    """
+    model.eval()
+    y_true, y_pred, y_prob = [], [], []
+
+    with torch.no_grad():
+        for imgs, labels in loader:
+            imgs = imgs.to(CFG.device, non_blocking=True)
+            logits = model(imgs)
+            probs = torch.softmax(logits, dim=1)
+
+            preds = probs.argmax(dim=1).cpu().numpy()
+            y_pred.append(preds)
+            y_prob.append(probs.cpu().numpy())
+            y_true.append(labels.numpy())
+
+    y_true = np.concatenate(y_true, axis=0)
+    y_pred = np.concatenate(y_pred, axis=0)
+    y_prob = np.concatenate(y_prob, axis=0)
+    return y_true, y_pred, y_prob
+
+
+def save_final_reports(y_true, y_pred, y_prob, class_names):
+    """
+    Saves:
+      - confusion matrix PNG
+      - per-class confusion matrices PNG
+      - confidence curves per class PNG
+      - final metrics CSV (overall + per-class)
+    """
+    ensure_dir(CFG.save_dir)
+
+    # Confusion matrix (overall)
+    plot_confusion_matrix(
+        y_true=y_true,
+        y_pred=y_pred,
+        class_names=class_names,
+        save_path=os.path.join(CFG.save_dir, "confusion_matrix.png")
+    )
+
+    # One-vs-rest confusion matrices
+    from sklearn.metrics import confusion_matrix
+    import matplotlib.pyplot as plt
+
+    for cid, name in enumerate(class_names):
+        yt = (y_true == cid).astype(int)
+        yp = (y_pred == cid).astype(int)
+        cm = confusion_matrix(yt, yp)
+
+        plt.figure(figsize=(5.5, 4.2))
+        plt.imshow(cm)
+        plt.title(f"Confusion Matrix (OvR) — {name}")
+        plt.xlabel("Predicted")
+        plt.ylabel("Actual")
+        plt.xticks([0, 1], [f"not_{name}", name], rotation=15, ha="right")
+        plt.yticks([0, 1], [f"not_{name}", name])
+
+        for i in range(2):
+            for j in range(2):
+                plt.text(j, i, str(cm[i, j]), ha="center", va="center")
+
+        plt.tight_layout()
+        plt.savefig(os.path.join(CFG.save_dir, f"confusion_matrix_{name}.png"), dpi=250)
+        plt.close()
+
+    # Confidence curves (per class)
+    confidence_curves(
+        y_true=y_true,
+        y_prob=y_prob,
+        class_names=class_names,
+        save_dir=CFG.save_dir,
+        steps=101
+    )
+
+    # Final Metrics (overall + per class) -> CSV
+    cls = per_class_metrics(y_true, y_pred, CFG.num_classes)
+    overall = overall_metrics(y_true, y_pred, CFG.num_classes)
+
+    import pandas as pd
+
+    rows = []
+    for cid, cname in enumerate(class_names):
+        rows.append({
+            "scope": "per_class",
+            "class_id": cid,
+            "class_name": cname,
+            "precision": float(cls["precision"][cid]),
+            "recall": float(cls["recall"][cid]),
+            "f1": float(cls["f1"][cid]),
+            "accuracy": float(cls["accuracy"][cid]),
+        })
+
+    rows.append({
+        "scope": "overall",
+        "class_id": None,
+        "class_name": "ALL",
+        "accuracy": float(overall["acc"]),
+        "precision_macro": float(overall["precision_macro"]),
+        "recall_macro": float(overall["recall_macro"]),
+        "f1_macro": float(overall["f1_macro"]),
+        "precision_weighted": float(overall["precision_weighted"]),
+        "recall_weighted": float(overall["recall_weighted"]),
+        "f1_weighted": float(overall["f1_weighted"]),
+    })
+
+    pd.DataFrame(rows).to_csv(os.path.join(CFG.save_dir, "final_metrics_summary.csv"), index=False)
+
+
+def main():
+    ensure_dir(CFG.save_dir)
+
+    # Speed knobs (optional)
+    if CFG.device == "cuda":
+        torch.backends.cudnn.benchmark = True
+        torch.backends.cudnn.enabled = True
+        try:
+            torch.set_float32_matmul_precision("high")
+        except Exception:
+            pass
+
+    # -------------------------
+    # DATA (balanced loader)
+    # -------------------------
+    train_loader, val_loader, class_names, class_counts = get_dataloaders()
+    CFG.class_names = class_names
+    print(f"Classes: {class_names}")
+    print(f"Train class counts: {class_counts.tolist()}")
+
+    # -------------------------
+    # MODEL
+    # -------------------------
+    model = YOLOv12SwinClassifier(num_classes=CFG.num_classes).to(CFG.device)
+
+    # -------------------------
+    # PHASE 1: FREEZE BACKBONE
+    # -------------------------
+    for p in model.backbone.parameters():
+        p.requires_grad = False
+    print("🔒 Backbone frozen (Phase 1: epochs 1–50)")
+
+    # -------------------------
+    # LOSS (class-weighted CE + label smoothing)
+    # -------------------------
+    class_weights = compute_class_weights_from_counts(class_counts).to(CFG.device)
+    criterion = torch.nn.CrossEntropyLoss(
+        weight=class_weights,
+        label_smoothing=0.1
+    )
+
+    # -------------------------
+    # OPTIMIZER (AdamW) + SCHEDULER (Cosine)
+    # -------------------------
+    optimizer = torch.optim.AdamW(
+        filter(lambda p: p.requires_grad, model.parameters()),
+        lr=CFG.lr,
+        weight_decay=1e-4
+    )
+
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+        optimizer,
+        T_max=CFG.epochs,
+        eta_min=1e-6
+    )
+
+    scaler = torch.cuda.amp.GradScaler(enabled=(CFG.device == "cuda" and CFG.use_amp))
+
+    # -------------------------
+    # HISTORY (for plots)
+    # -------------------------
+    history = {
+        "train_loss": [], "val_loss": [],
+        "train_acc": [], "val_acc": [],
+        "train_precision": [], "val_precision": [],
+        "train_recall": [], "val_recall": [],
+        "train_f1": [], "val_f1": [],
+        "train_ap": [], "val_ap": [],     # per class AP
+        "train_mAP": [], "val_mAP": [],   # mean AP
+        "train_f1_weighted": [], "val_f1_weighted": []
+    }
+
+    best_f1 = -1.0
+    best_epoch = -1
+
+    # -------------------------
+    # TRAIN LOOP (100 epochs, anti-overfit)
+    # -------------------------
+    for epoch in range(CFG.epochs):
+
+        # -------------------------
+        # PHASE 2: PARTIAL UNFREEZE + LR DROP
+        # -------------------------
+        if epoch == 50:
+            print("🔓 Phase 2: Unfreezing last Swin stage + reducing LR (epochs 51–100)")
+
+            for name, p in model.backbone.named_parameters():
+                # last Swin stage (common timm naming)
+                if "layers.3" in name:
+                    p.requires_grad = True
+
+            # Ensure optimizer sees newly-trainable params
+            optimizer = torch.optim.AdamW(
+                filter(lambda p: p.requires_grad, model.parameters()),
+                lr=CFG.lr * 0.1,
+                weight_decay=1e-4
+            )
+
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+                optimizer,
+                T_max=CFG.epochs - epoch,
+                eta_min=1e-6
+            )
+
+        # -------------------------
+        # OPTIONAL: SWITCH TO NATURAL DISTRIBUTION LATE
+        # -------------------------
+        # (This reduces late-epoch oscillation from oversampling.)
+        if epoch == 60:
+            print("🔁 Switching to natural data distribution (shuffle=True) for late training")
+            # Rebuild dataloaders without sampler if your get_dataloaders() doesn't expose datasets.
+            # If you want this strictly enabled, modify get_dataloaders() to also return train_ds.
+            # For now, we keep sampler-based loader (stable + simple).
+            pass
+
+        train_metrics = train_one_epoch(
+            model, train_loader, criterion, optimizer, scaler, epoch, history
+        )
+        val_metrics = validate_one_epoch(
+            model, val_loader, criterion, epoch, history
+        )
+
+        # train_metrics / val_metrics:
+        # (loss, acc, f1_macro, precision_macro, recall_macro, mAP, f1_weighted)
+        train_loss, train_acc, train_f1, train_prec, train_rec, train_mAP, train_f1w = train_metrics
+        val_loss, val_acc, val_f1, val_prec, val_rec, val_mAP, val_f1w = val_metrics
+
+        history["train_f1_weighted"].append(train_f1w)
+        history["val_f1_weighted"].append(val_f1w)
+
+        print(
+            f"Epoch {epoch+1}/{CFG.epochs} | "
+            f"Train: Loss={train_loss:.3f}, Acc={train_acc:.3f}, F1(macro)={train_f1:.3f}, mAP={train_mAP:.3f} | "
+            f"Val: Loss={val_loss:.3f}, Acc={val_acc:.3f}, F1(macro)={val_f1:.3f}, mAP={val_mAP:.3f}"
+        )
+
+        # Save best by macro F1 (balanced objective)
+        if val_f1 > best_f1:
+            best_f1 = val_f1
+            best_epoch = epoch + 1
+            torch.save(model.state_dict(), os.path.join(CFG.save_dir, "best_model.pth"))
+
+        # Step scheduler
+        scheduler.step()
+
+    print(f"\nBest checkpoint: epoch {best_epoch} with Val macro-F1 = {best_f1:.4f}")
+    print("Saved: best_model.pth")
+
+    # -------------------------
+    # PLOTS (training curves)
+    # -------------------------
+    plot_training_curves(history, CFG.save_dir)
+
+    # -------------------------
+    # FINAL EVAL ON VAL (best model)
+    # -------------------------
+    model.load_state_dict(
+        torch.load(os.path.join(CFG.save_dir, "best_model.pth"), map_location=CFG.device)
+    )
+
+    y_true, y_pred, y_prob = evaluate_on_loader(model, val_loader)
+
+    # Save reports + confidence curves + confusion matrices + summary csv
+    save_final_reports(y_true, y_pred, y_prob, class_names)
+
+    print("Saved: confusion matrices, confidence curves, training curves, final_metrics_summary.csv")
+    print("Training complete.")
+
+
+if __name__ == "__main__":
+    main()
+yolo_swin_model.py:
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import timm
+
+# Swin Transformer backbone (hierarchical features)
+class SwinBackbone(nn.Module):
+    def __init__(self, variant='swin_tiny_patch4_window7_224', in_chans=3, pretrained=True):
+        super().__init__()
+        self.model = timm.create_model(variant, pretrained=pretrained, features_only=True,
+                                       in_chans=in_chans, out_indices=(1,2,3), img_size=512, window_size=8)
+        self.channels = self.model.feature_info.channels()  # [C3,C4,C5] channels
+
+    def forward(self, x):
+        # returns list of feature maps [P3, P4, P5] in (B,C,H,W)
+        feats = self.model(x)
+        return [f.permute(0,3,1,2).contiguous() for f in feats]
+
+# YOLO-inspired neck (region/self-attention blocks could be added here if needed)
+class FPNNeck(nn.Module):
+    def __init__(self, in_channels, out_c=256):
+        super().__init__()
+        c3, c4, c5 = in_channels
+        # Reduce all to common channel size
+        self.reduce3 = nn.Conv2d(c3, out_c, 1)
+        self.reduce4 = nn.Conv2d(c4, out_c, 1)
+        self.reduce5 = nn.Conv2d(c5, out_c, 1)
+        # Optional: further conv layers for fusion (e.g., RELAN or attention blocks)
+
+    def forward(self, c3, c4, c5):
+        p3 = self.reduce3(c3)
+        p4 = self.reduce4(c4)
+        p5 = self.reduce5(c5)
+        # Upsample lower levels to match P5 spatial dims
+        p3_up = F.interpolate(p3, size=p5.shape[-2:], mode='nearest')
+        p4_up = F.interpolate(p4, size=p5.shape[-2:], mode='nearest')
+        # Concatenate and fuse
+        fused = torch.cat([p3_up, p4_up, p5], dim=1)  # (B,3*out_c,H5,W5)
+        return fused
+
+# Full model with classification head
+class YOLOv12SwinClassifier(nn.Module):
+    def __init__(self, num_classes=3, backbone_variant='swin_tiny_patch4_window7_224'):
+        super().__init__()
+        self.backbone = SwinBackbone(
+            variant=backbone_variant,
+            in_chans=3,
+            pretrained=True
+        )
+
+        self.neck = FPNNeck(self.backbone.channels, out_c=128)
+
+        self.merge_conv = nn.Conv2d(128 * 3, 256, kernel_size=3, padding=1)
+
+        self.avgpool = nn.AdaptiveAvgPool2d(1)
+
+        # ✅ ADD DROPOUT (critical)
+        self.dropout = nn.Dropout(p=0.4)
+
+        self.fc = nn.Linear(256, num_classes)
+
+    def forward(self, x):
+        c3, c4, c5 = self.backbone(x)
+        fused = self.neck(c3, c4, c5)
+        merged = F.relu(self.merge_conv(fused))
+        pooled = self.avgpool(merged).view(x.size(0), -1)
+        pooled = self.dropout(pooled)  # ✅
+        logits = self.fc(pooled)
+        return logits
+The goals:
+- save global metrics and per class metrics in separate csvs
+- make plots combined using seaborn instead of matplotlib, plots should be professional and industry level
+- confusion matrix should be in blue theme
+- all metrices should be saved so that we do not have to train again, 
+- the goal is to acheive 99.1 or 99.2 accuracy,
+- give me the updated code for all files where we are going to make changes
+
+
+
+
+

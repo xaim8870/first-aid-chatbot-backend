@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+cahtbot-venv/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+
+data/eda/
+data/knowledge_faiss/*.index
+data/knowledge_faiss/*.pkl

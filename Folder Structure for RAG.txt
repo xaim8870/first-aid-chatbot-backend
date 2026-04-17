@@ -1,0 +1,67 @@
+Folder Structure for RAG:
+firstaid-rag-chatbot/
+│
+├── backend/                         # Retrieval + safety only
+│   ├── app/
+│   │   ├── main.py                  # FastAPI entry point
+│   │   │
+│   │   ├── rag/
+│   │   │   ├── retriever.py         # FAISS search
+│   │   │   ├── embeddings.py        # (only for offline build)
+│   │   │   └── schema.py            # data models
+│   │   │
+│   │   ├── safety/
+│   │   │   ├── rules.py             # emergency triggers
+│   │   │   └── detector.py          # rule-based safety checks
+│   │   │
+│   │   ├── language/
+│   │   │   └── detect.py            # Urdu / English detection
+│   │   │
+│   │   └── config.py                # paths, constants
+│   │
+│   ├── data/
+│   │   ├── raw/                     # original dataset
+│   │   └── index/                   # FAISS + metadata
+│   │
+│   ├── scripts/
+│   │   ├── clean_dataset.py         # normalize dataset
+│   │   └── build_index.py           # embeddings + FAISS
+│   │
+│   ├── requirements.txt
+│   └── README.md
+│
+├── frontend/                        # Browser-side LLM
+│   ├── public/
+│   │   └── models/                  # WebLLM configs
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ChatWindow.tsx
+│   │   │   ├── MessageBubble.tsx
+│   │   │   └── LanguageToggle.tsx
+│   │   │
+│   │   ├── rag/
+│   │   │   ├── fetchContext.ts      # backend call
+│   │   │   └── promptBuilder.ts     # safety + language prompt
+│   │   │
+│   │   ├── llm/
+│   │   │   └── webllm.ts            # browser LLM setup
+│   │   │
+│   │   ├── utils/
+│   │   │   └── safetyUI.ts          # emergency UI handling
+│   │   │
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   │
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── SAFETY_POLICY.md
+│   ├── DATASET_SOURCES.md
+│   └── ETHICAL_USE.md
+│
+├── LICENSE
+└── README.md

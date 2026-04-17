@@ -1,0 +1,1932 @@
+{
+  "bleeding": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "severe bleeding",
+      "heavy bleeding",
+      "uncontrolled bleeding",
+      "hemorrhage",
+      "blood loss"
+    ],
+    "red_flags": [
+      "blood soaking through cloth",
+      "spurting blood",
+      "pale and weak",
+      "fainting",
+      "cannot stop bleeding"
+    ],
+    "negative_hints": [
+      "minor spotting",
+      "small paper cut only"
+    ],
+    "phrases_en": [
+      "severe bleeding",
+      "heavy bleeding",
+      "bleeding that will not stop",
+      "blood is pouring out",
+      "deep cut bleeding a lot",
+      "person is losing a lot of blood",
+      "how to stop heavy bleeding",
+      "cut is bleeding nonstop",
+      "blood soaking through bandage"
+    ],
+    "phrases_ur": [
+      "شدید خون بہنا",
+      "بہت زیادہ خون بہنا",
+      "خون نہ رکنا",
+      "خون تیزی سے بہہ رہا ہے",
+      "زخم سے بہت خون نکل رہا ہے",
+      "خون مسلسل بہہ رہا ہے",
+      "شدید بلیڈنگ روکنے کا طریقہ"
+    ],
+    "phrases_mixed": [
+      "severe bleeding ہو رہی ہے",
+      "خون بہت زیادہ بہہ رہا ہے",
+      "bleeding stop نہیں ہو رہی",
+      "cut se blood nonstop aa raha hai",
+      "bandage blood se bhar gaya hai",
+      "heavy bleeding ka kya karein"
+    ]
+  },
+  "allergic_reaction": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "allergy reaction",
+      "severe allergy",
+      "anaphylaxis",
+      "swelling after sting",
+      "allergic swelling"
+    ],
+    "red_flags": [
+      "lip swelling",
+      "tongue swelling",
+      "trouble breathing",
+      "widespread rash",
+      "collapse"
+    ],
+    "negative_hints": [
+      "mild seasonal allergy only",
+      "runny nose only"
+    ],
+    "phrases_en": [
+      "allergic reaction",
+      "severe allergy",
+      "swelling after allergy",
+      "allergic reaction after food",
+      "lip swelling after sting",
+      "possible anaphylaxis",
+      "rash and breathing trouble",
+      "throat swelling after allergy",
+      "allergy after medicine"
+    ],
+    "phrases_ur": [
+      "الرجی کا شدید ردِعمل",
+      "شدید الرجی",
+      "الرجی کے بعد سوجن",
+      "کھانے کے بعد الرجی",
+      "ہونٹ سوج جانا",
+      "گلے میں سوجن",
+      "سانس کے ساتھ الرجی ہونا",
+      "اینافیلیکسیس کا شبہ"
+    ],
+    "phrases_mixed": [
+      "allergic reaction ہو رہا ہے",
+      "شدید allergy ہو گئی ہے",
+      "lips swell ho gaye hain",
+      "allergy ke baad breathing issue hai",
+      "throat swell ho raha hai",
+      "possible anaphylaxis lag raha hai"
+    ]
+  },
+  "poisoning": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "poison exposure",
+      "swallowed poison",
+      "toxic ingestion",
+      "chemical poisoning",
+      "overdose suspicion"
+    ],
+    "red_flags": [
+      "unconscious",
+      "seizure",
+      "breathing trouble",
+      "chemical swallowed",
+      "blue lips"
+    ],
+    "negative_hints": [
+      "bad taste only",
+      "food preference question"
+    ],
+    "phrases_en": [
+      "poisoning",
+      "someone swallowed poison",
+      "suspected poisoning",
+      "child drank something toxic",
+      "chemical swallowed",
+      "possible overdose",
+      "ate poisonous substance",
+      "ingested poison",
+      "how to help poisoned person"
+    ],
+    "phrases_ur": [
+      "زہر لگ جانا",
+      "کسی نے زہریلی چیز کھا لی",
+      "زہر کا شبہ",
+      "بچے نے زہریلی چیز پی لی",
+      "کیمیکل نگل لیا",
+      "اوورڈوز کا شبہ",
+      "زہریلا مادہ کھا لیا"
+    ],
+    "phrases_mixed": [
+      "poisoning ہو گئی ہے",
+      "کسی نے poison کھا لیا ہے",
+      "child ne chemical pee liya hai",
+      "suspected overdose hai",
+      "toxic cheez kha li hai",
+      "poisoning mein kya karein"
+    ]
+  },
+  "vertigo": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult"
+    ],
+    "aliases": [
+      "vertigo",
+      "dizziness",
+      "spinning sensation",
+      "room spinning",
+      "balance problem"
+    ],
+    "red_flags": [
+      "fainting",
+      "one side weakness",
+      "head injury",
+      "chest pain",
+      "cannot stand at all"
+    ],
+    "negative_hints": [
+      "simple headache only",
+      "fever only"
+    ],
+    "phrases_en": [
+      "vertigo",
+      "dizziness",
+      "feeling the room is spinning",
+      "room spinning around me",
+      "severe dizziness",
+      "loss of balance",
+      "sudden spinning sensation",
+      "cannot stand because of dizziness"
+    ],
+    "phrases_ur": [
+      "ورٹیگو",
+      "چکر آنا",
+      "گھومنے جیسا محسوس ہونا",
+      "کمرہ گھومتا محسوس ہونا",
+      "شدید چکر",
+      "توازن خراب ہونا",
+      "اچانک چکر آنا"
+    ],
+    "phrases_mixed": [
+      "vertigo ہو رہا ہے",
+      "شدید dizziness ہو رہی ہے",
+      "room ghoom raha hai",
+      "balance kharab ho gaya hai",
+      "sar halka lag raha hai aur spinning hai"
+    ]
+  },
+  "fainting": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "fainting",
+      "passed out",
+      "blackout",
+      "syncope",
+      "loss of consciousness"
+    ],
+    "red_flags": [
+      "not waking up",
+      "head injury",
+      "chest pain before fainting",
+      "pregnant and fainted",
+      "difficulty breathing"
+    ],
+    "negative_hints": [
+      "sleeping",
+      "tired only"
+    ],
+    "phrases_en": [
+      "fainting",
+      "someone fainted",
+      "loss of consciousness",
+      "passed out",
+      "person blacked out",
+      "almost fainted",
+      "suddenly collapsed and fainted",
+      "what to do after fainting"
+    ],
+    "phrases_ur": [
+      "بے ہوش ہونا",
+      "کوئی بے ہوش ہو گیا",
+      "ہوش کھو دینا",
+      "اچانک بے ہوش ہو جانا",
+      "غشی طاری ہونا",
+      "قریب تھا کہ بے ہوش ہو جاتا"
+    ],
+    "phrases_mixed": [
+      "someone faint ہو گیا",
+      "بے ہوش ہو گیا ہے",
+      "passed out ho gaya hai",
+      "blackout ho gaya",
+      "almost faint ho raha tha"
+    ]
+  },
+  "seizure": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "seizure",
+      "convulsions",
+      "fit",
+      "epileptic fit",
+      "febrile convulsion"
+    ],
+    "red_flags": [
+      "lasting more than 5 minutes",
+      "repeated seizures",
+      "not breathing after seizure",
+      "pregnant",
+      "head injury"
+    ],
+    "negative_hints": [
+      "simple fainting only",
+      "shivering from cold only"
+    ],
+    "phrases_en": [
+      "seizure",
+      "convulsions",
+      "fit attack",
+      "epileptic fit",
+      "person is shaking uncontrollably",
+      "child having febrile seizure",
+      "sudden seizure",
+      "what to do during a seizure"
+    ],
+    "phrases_ur": [
+      "دورہ",
+      "سیژر",
+      "مرگی کا دورہ",
+      "جسم میں جھٹکے لگنا",
+      "بچے کو دورہ پڑنا",
+      "اچانک دورہ",
+      "دورے کی صورت میں کیا کریں"
+    ],
+    "phrases_mixed": [
+      "seizure آ رہا ہے",
+      "دورہ پڑ رہا ہے",
+      "fit aa gaya hai",
+      "child ko seizure hua hai",
+      "convulsions ho rahi hain"
+    ]
+  },
+  "burns": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "burn",
+      "scald",
+      "hot water burn",
+      "hot oil burn",
+      "thermal burn"
+    ],
+    "red_flags": [
+      "burn to face",
+      "burn to airway",
+      "large burn area",
+      "electrical burn",
+      "chemical burn"
+    ],
+    "negative_hints": [
+      "sun exposure only without burn",
+      "skin rash only"
+    ],
+    "phrases_en": [
+      "burn",
+      "hot water burn",
+      "hand got burned",
+      "scald",
+      "hot oil burn",
+      "steam burn",
+      "burn from stove",
+      "burn from iron",
+      "skin got burned"
+    ],
+    "phrases_ur": [
+      "جل جانا",
+      "گرم پانی سے جلنا",
+      "ہاتھ جل گیا",
+      "جلنے کا زخم",
+      "تیل سے جل جانا",
+      "بھاپ سے جلنا",
+      "چولہے سے جلنا"
+    ],
+    "phrases_mixed": [
+      "burn ہو گیا ہے",
+      "ہاتھ burn ہو گیا ہے",
+      "hot water se burn ho gaya",
+      "scald ho gaya hai",
+      "skin jal gayi hai"
+    ]
+  },
+  "fracture": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "fracture",
+      "broken bone",
+      "bone crack",
+      "suspected fracture",
+      "limb broken"
+    ],
+    "red_flags": [
+      "bone sticking out",
+      "cannot move limb",
+      "severe deformity",
+      "open fracture",
+      "numb fingers"
+    ],
+    "negative_hints": [
+      "minor bruise only",
+      "muscle soreness only"
+    ],
+    "phrases_en": [
+      "bone fracture",
+      "broken bone",
+      "possible fracture",
+      "arm might be broken",
+      "leg might be broken",
+      "suspected broken bone",
+      "swollen painful limb after fall",
+      "bone cracked"
+    ],
+    "phrases_ur": [
+      "ہڈی ٹوٹنا",
+      "فریکچر",
+      "ہڈی میں فریکچر",
+      "بازو ٹوٹ گیا",
+      "ٹانگ ٹوٹ گئی",
+      "ہڈی میں دراڑ",
+      "گرنے کے بعد ہڈی ٹوٹنے کا شبہ"
+    ],
+    "phrases_mixed": [
+      "fracture ہو گیا ہے",
+      "ہڈی break ہو گئی ہے",
+      "arm toot gaya hai",
+      "leg fracture lag raha hai",
+      "bone crack ho gayi hai"
+    ]
+  },
+  "shock": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "circulatory shock",
+      "person in shock",
+      "cold clammy shock",
+      "post-trauma shock"
+    ],
+    "red_flags": [
+      "cold clammy skin",
+      "weak pulse",
+      "confusion",
+      "pale skin",
+      "collapse"
+    ],
+    "negative_hints": [
+      "emotional shock only",
+      "surprised only"
+    ],
+    "phrases_en": [
+      "shock",
+      "person is in shock",
+      "signs of shock",
+      "cold clammy and weak",
+      "pale and shaky after injury",
+      "possible shock after bleeding",
+      "circulatory shock"
+    ],
+    "phrases_ur": [
+      "شاک",
+      "صدمے کی حالت",
+      "شاک کی علامات",
+      "ٹھنڈی چپچپی جلد",
+      "زخمی کے بعد شاک",
+      "رنگ پیلا پڑ جانا اور کمزوری"
+    ],
+    "phrases_mixed": [
+      "shock میں ہے",
+      "شاک کی حالت ہو گئی ہے",
+      "cold clammy skin hai",
+      "injury ke baad shock lag raha hai"
+    ]
+  },
+  "choking": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "choking",
+      "airway obstruction",
+      "food stuck in throat",
+      "cannot cough",
+      "cannot speak"
+    ],
+    "red_flags": [
+      "cannot speak",
+      "cannot breathe",
+      "turning blue",
+      "silent choking",
+      "collapsed"
+    ],
+    "negative_hints": [
+      "sore throat only",
+      "able to talk normally"
+    ],
+    "phrases_en": [
+      "choking",
+      "cannot swallow and choking",
+      "something stuck in throat",
+      "food stuck in throat",
+      "person cannot breathe because of food",
+      "silent choking",
+      "cannot speak and choking",
+      "baby is choking"
+    ],
+    "phrases_ur": [
+      "دم گھٹنا",
+      "گلے میں چیز پھنس جانا",
+      "سانس رکنے جیسی کیفیت",
+      "کھانا گلے میں پھنس گیا",
+      "سانس نہیں آ رہی",
+      "بول نہیں پا رہا اور دم گھٹ رہا ہے",
+      "بچہ دم گھٹ رہا ہے"
+    ],
+    "phrases_mixed": [
+      "choking ہو رہی ہے",
+      "گلے میں کچھ stuck ہو گیا ہے",
+      "food throat mein phans gaya hai",
+      "cannot breathe kyun ke kuch phans gaya hai",
+      "baby choking kar raha hai"
+    ]
+  },
+  "temperature_emergency": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "heatstroke",
+      "heat exhaustion",
+      "hypothermia",
+      "frostbite",
+      "temperature emergency"
+    ],
+    "red_flags": [
+      "confusion in heat",
+      "unconscious after heat",
+      "shivering with cold exposure",
+      "very low body temperature",
+      "hot dry skin"
+    ],
+    "negative_hints": [
+      "mild warm weather discomfort only"
+    ],
+    "phrases_en": [
+      "heatstroke",
+      "extreme heat",
+      "extreme cold exposure",
+      "heat exhaustion",
+      "hypothermia",
+      "frostbite",
+      "heat cramps",
+      "collapsed in hot weather",
+      "too cold and shivering badly"
+    ],
+    "phrases_ur": [
+      "شدید گرمی",
+      "ہیٹ اسٹروک",
+      "شدید سردی کا اثر",
+      "ہیٹ ایگزاوشن",
+      "ہائپوتھرمیا",
+      "سردی سے جسم سن ہو جانا",
+      "گرمی میں بے ہوش ہو جانا"
+    ],
+    "phrases_mixed": [
+      "heatstroke ہو گیا ہے",
+      "extreme cold exposure ہو گئی ہے",
+      "heat exhaustion lag rahi hai",
+      "bahut zyada thand lag gayi hai",
+      "garam mausam mein collapse ho gaya hai"
+    ]
+  },
+  "snake_bite": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "snake bite",
+      "snakebite",
+      "venomous bite",
+      "bitten by snake"
+    ],
+    "red_flags": [
+      "swelling spreading",
+      "difficulty breathing",
+      "collapse",
+      "snake identified as venomous",
+      "bite on face"
+    ],
+    "negative_hints": [
+      "insect bite only"
+    ],
+    "phrases_en": [
+      "snake bite",
+      "bitten by a snake",
+      "snake has bitten someone",
+      "venomous snake bite",
+      "snake bit my leg",
+      "someone got bitten by snake",
+      "what to do after snake bite"
+    ],
+    "phrases_ur": [
+      "سانپ کا کاٹنا",
+      "سانپ نے کاٹ لیا",
+      "سانپ کے کاٹنے کی صورت",
+      "زہریلے سانپ نے کاٹا",
+      "سانپ نے ٹانگ پر کاٹ لیا"
+    ],
+    "phrases_mixed": [
+      "snake bite ہو گیا ہے",
+      "سانپ نے bite کر لیا ہے",
+      "snake ne kaat liya hai",
+      "venomous snake bite lag rahi hai"
+    ]
+  },
+  "head_injury": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "head injury",
+      "head trauma",
+      "hit head",
+      "concussion",
+      "knocked head"
+    ],
+    "red_flags": [
+      "vomiting after head hit",
+      "confusion",
+      "loss of consciousness",
+      "bleeding from ear",
+      "seizure after head injury"
+    ],
+    "negative_hints": [
+      "simple headache only"
+    ],
+    "phrases_en": [
+      "head injury",
+      "hit on the head",
+      "head trauma",
+      "knocked head after fall",
+      "possible concussion",
+      "child hit head",
+      "head injury with vomiting",
+      "head got injured"
+    ],
+    "phrases_ur": [
+      "سر پر چوٹ",
+      "سر لگ گیا",
+      "ہیڈ انجری",
+      "گرنے سے سر لگ جانا",
+      "کنکشن کا شبہ",
+      "سر پر چوٹ کے بعد قے",
+      "بچے کے سر پر چوٹ"
+    ],
+    "phrases_mixed": [
+      "head injury ہو گئی ہے",
+      "سر پر injury لگ گئی ہے",
+      "head hit ho gaya hai",
+      "fall ke baad sir lag gaya",
+      "possible concussion hai"
+    ]
+  },
+  "chest_pain": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult"
+    ],
+    "aliases": [
+      "chest pain",
+      "heart attack",
+      "tightness in chest",
+      "pain spreading to arm",
+      "sudden chest pain"
+    ],
+    "red_flags": [
+      "sweating",
+      "shortness of breath",
+      "pain to arm or jaw",
+      "collapse",
+      "nausea with chest pain"
+    ],
+    "negative_hints": [
+      "heartburn only",
+      "muscle pain after gym only"
+    ],
+    "phrases_en": [
+      "chest pain",
+      "sudden chest pain",
+      "possible heart attack",
+      "chest pain with sweating",
+      "my father has chest pain",
+      "chest tightness",
+      "left side chest pain",
+      "pain spreading to arm from chest",
+      "crushing chest pain"
+    ],
+    "phrases_ur": [
+      "سینے میں درد",
+      "اچانک سینے میں درد",
+      "دل کے دورے کا شبہ",
+      "سینے میں درد اور پسینہ",
+      "میرے والد کو سینے میں درد ہے",
+      "سینے میں جکڑن",
+      "درد بازو تک جا رہا ہے"
+    ],
+    "phrases_mixed": [
+      "chest pain ہو رہا ہے",
+      "میرے والد کو chest pain ہے",
+      "abu ko sine mein dard hai",
+      "chest pain ke sath paseena aa raha hai",
+      "left side chest pain ho raha hai"
+    ]
+  },
+  "breathing_difficulty": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "difficulty breathing",
+      "shortness of breath",
+      "trouble breathing",
+      "breathless",
+      "hard to breathe"
+    ],
+    "red_flags": [
+      "blue lips",
+      "unable to speak",
+      "rapid breathing",
+      "worsening fast",
+      "collapse"
+    ],
+    "negative_hints": [
+      "stuffy nose only",
+      "mild cough only"
+    ],
+    "phrases_en": [
+      "difficulty breathing",
+      "trouble breathing",
+      "shortness of breath",
+      "hard to breathe",
+      "breathless",
+      "cannot catch breath",
+      "rapid breathing",
+      "baby breathing fast"
+    ],
+    "phrases_ur": [
+      "سانس لینے میں دشواری",
+      "سانس پھولنا",
+      "سانس لینے میں مشکل",
+      "سانس نہیں پوری آ رہی",
+      "سانس تیز چل رہی ہے",
+      "بچے کی سانس تیز ہو رہی ہے"
+    ],
+    "phrases_mixed": [
+      "breathing difficulty ہو رہی ہے",
+      "سانس میں difficulty ہو رہی ہے",
+      "saans nahi aa rahi",
+      "shortness of breath ho rahi hai",
+      "baby ki breathing fast hai"
+    ]
+  },
+  "severe_wound": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "deep wound",
+      "severe wound",
+      "gaping wound",
+      "deep cut",
+      "large open wound"
+    ],
+    "red_flags": [
+      "bone visible",
+      "deep tissue visible",
+      "won't stop bleeding",
+      "amputation",
+      "dirty deep wound"
+    ],
+    "negative_hints": [
+      "small paper cut",
+      "minor scrape only"
+    ],
+    "phrases_en": [
+      "deep wound",
+      "severe wound",
+      "deep cut",
+      "gaping wound",
+      "large open wound",
+      "badly cut skin",
+      "serious cut",
+      "deep laceration"
+    ],
+    "phrases_ur": [
+      "گہرا زخم",
+      "شدید زخم",
+      "گہرا کٹ",
+      "کھلا زخم",
+      "بڑا گہرا زخم",
+      "بہت بری طرح کٹ جانا"
+    ],
+    "phrases_mixed": [
+      "deep wound ہو گیا ہے",
+      "گہرا cut لگ گیا ہے",
+      "bohat gehra zakhm hai",
+      "serious cut lag gaya hai"
+    ]
+  },
+  "eye_injury": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "eye injury",
+      "something in eye",
+      "injured eye",
+      "eye trauma",
+      "foreign body in eye"
+    ],
+    "red_flags": [
+      "vision loss",
+      "chemical in eye",
+      "object stuck in eye",
+      "severe pain",
+      "bleeding from eye"
+    ],
+    "negative_hints": [
+      "simple itching only",
+      "sleepy eyes only"
+    ],
+    "phrases_en": [
+      "eye injury",
+      "something in the eye",
+      "eye got hurt",
+      "foreign object in eye",
+      "dust in eye and pain",
+      "chemical in eye",
+      "eye trauma",
+      "vision blurry after eye injury"
+    ],
+    "phrases_ur": [
+      "آنکھ میں چوٹ",
+      "آنکھ میں کچھ چلا گیا",
+      "آنکھ زخمی ہو گئی",
+      "آنکھ میں گرد چلی گئی",
+      "کیمیکل آنکھ میں چلا گیا",
+      "نظر دھندلی ہو گئی"
+    ],
+    "phrases_mixed": [
+      "eye injury ہو گئی ہے",
+      "آنکھ میں kuch chala gaya hai",
+      "chemical eye mein chala gaya",
+      "eye trauma ho gaya hai",
+      "vision blur ho gayi hai"
+    ]
+  },
+  "first_aid_kit_contents": {
+    "severity": "routine",
+    "age_focus": [
+      "general"
+    ],
+    "aliases": [
+      "first aid kit items",
+      "first aid box contents",
+      "what goes in kit",
+      "emergency kit items"
+    ],
+    "red_flags": [],
+    "negative_hints": [],
+    "phrases_en": [
+      "first aid kit items",
+      "what should be in a first aid kit",
+      "basic first aid kit contents",
+      "things to keep in first aid box",
+      "home first aid kit checklist"
+    ],
+    "phrases_ur": [
+      "فرسٹ ایڈ کٹ میں کیا ہونا چاہیے",
+      "ابتدائی طبی امداد کے ڈبے کی اشیا",
+      "فرسٹ ایڈ باکس کی ضروری چیزیں",
+      "گھر کی فرسٹ ایڈ کٹ کی فہرست"
+    ],
+    "phrases_mixed": [
+      "first aid kit میں کیا ہونا چاہیے",
+      "basic first aid box contents",
+      "home first aid kit checklist kya hai"
+    ]
+  },
+  "basic_first_aid_principles": {
+    "severity": "routine",
+    "age_focus": [
+      "general"
+    ],
+    "aliases": [
+      "basic first aid rules",
+      "first aid fundamentals",
+      "first aid basics"
+    ],
+    "red_flags": [],
+    "negative_hints": [],
+    "phrases_en": [
+      "basic first aid principles",
+      "principles of first aid",
+      "fundamentals of first aid",
+      "first aid basics",
+      "basic first aid rules"
+    ],
+    "phrases_ur": [
+      "ابتدائی طبی امداد کے بنیادی اصول",
+      "فرسٹ ایڈ کے اصول",
+      "بنیادی ابتدائی طبی امداد",
+      "فرسٹ ایڈ کے بنیادی قواعد"
+    ],
+    "phrases_mixed": [
+      "basic first aid principles کیا ہیں",
+      "first aid کے basic rules",
+      "first aid basics kya hain"
+    ]
+  },
+  "emergency_response_guidelines": {
+    "severity": "routine",
+    "age_focus": [
+      "general"
+    ],
+    "aliases": [
+      "medical emergency steps",
+      "emergency response steps",
+      "what to do in emergency",
+      "emergency basics"
+    ],
+    "red_flags": [],
+    "negative_hints": [],
+    "phrases_en": [
+      "medical emergency steps",
+      "general emergency response",
+      "what to do in an emergency",
+      "emergency response steps",
+      "first steps in medical emergency"
+    ],
+    "phrases_ur": [
+      "طبی ہنگامی صورتحال کے اقدامات",
+      "ایمرجنسی میں کیا کرنا چاہیے",
+      "ہنگامی صورت میں عمومی اقدامات",
+      "طبی ایمرجنسی کے پہلے اقدامات"
+    ],
+    "phrases_mixed": [
+      "emergency response steps کیا ہیں",
+      "medical emergency میں کیا کرنا چاہیے",
+      "emergency mein first step kya hai"
+    ]
+  },
+  "cpr_resuscitation": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "CPR",
+      "cardiopulmonary resuscitation",
+      "resuscitation",
+      "not breathing and unresponsive"
+    ],
+    "red_flags": [
+      "not breathing",
+      "no pulse",
+      "unresponsive",
+      "collapsed",
+      "blue lips"
+    ],
+    "negative_hints": [
+      "breathing normally",
+      "awake and talking"
+    ],
+    "phrases_en": [
+      "CPR",
+      "how to perform CPR",
+      "person is unresponsive and not breathing",
+      "start CPR",
+      "how do i give CPR",
+      "no pulse and not breathing",
+      "collapsed and not responding",
+      "baby needs CPR"
+    ],
+    "phrases_ur": [
+      "سی پی آر",
+      "CPR کیسے کریں",
+      "بے ہوش اور سانس نہ لینا",
+      "سی پی آر دینا",
+      "نبض نہیں چل رہی",
+      "گر کر بے ہوش ہو گیا اور سانس نہیں ہے"
+    ],
+    "phrases_mixed": [
+      "CPR کیسے کرتے ہیں",
+      "unresponsive ہے اور breathing نہیں ہو رہی",
+      "pulse nahi hai aur breathing bhi nahi",
+      "CPR start karni hai",
+      "baby ko CPR chahiye"
+    ]
+  },
+  "recovery_position": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "recovery position",
+      "side position",
+      "unconscious but breathing position"
+    ],
+    "red_flags": [
+      "not breathing",
+      "spinal injury suspected"
+    ],
+    "negative_hints": [
+      "sitting up and awake",
+      "not unconscious"
+    ],
+    "phrases_en": [
+      "recovery position",
+      "how to place in recovery position",
+      "when to use recovery position",
+      "unconscious but breathing side position",
+      "how to put someone on their side safely"
+    ],
+    "phrases_ur": [
+      "ریکوری پوزیشن",
+      "ریکوری پوزیشن کیسے دیں",
+      "ریکوری پوزیشن کب استعمال ہوتی ہے",
+      "بے ہوش مگر سانس لیتے شخص کو پہلو پر کیسے لٹائیں"
+    ],
+    "phrases_mixed": [
+      "recovery position کیسے دیں",
+      "ریکوری position کب دینی ہے",
+      "unconscious lekin breathing hai to side pe kaise karein"
+    ]
+  },
+  "stroke_signs": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult"
+    ],
+    "aliases": [
+      "stroke",
+      "possible stroke",
+      "face drooping",
+      "slurred speech",
+      "FAST signs"
+    ],
+    "red_flags": [
+      "one sided weakness",
+      "facial droop",
+      "speech difficulty",
+      "sudden confusion",
+      "collapse"
+    ],
+    "negative_hints": [
+      "simple vertigo only",
+      "minor headache only"
+    ],
+    "phrases_en": [
+      "stroke signs",
+      "possible stroke",
+      "face drooping and weakness",
+      "slurred speech and weakness",
+      "one side not moving",
+      "FAST signs of stroke",
+      "sudden facial droop"
+    ],
+    "phrases_ur": [
+      "فالج کی علامات",
+      "اسٹروک کا شبہ",
+      "چہرہ ٹیڑھا اور کمزوری",
+      "بولنے میں دقت اور کمزوری",
+      "جسم کا ایک حصہ کمزور ہو گیا",
+      "فالج کے FAST signs"
+    ],
+    "phrases_mixed": [
+      "stroke signs کیا ہیں",
+      "possible stroke ہو رہا ہے",
+      "face droop aur weakness hai",
+      "speech slurred ho gayi hai",
+      "ek side weak ho gaya hai"
+    ]
+  },
+  "diabetic_emergency": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "low blood sugar",
+      "high blood sugar",
+      "diabetic emergency",
+      "hypoglycemia",
+      "hyperglycemia"
+    ],
+    "red_flags": [
+      "confusion",
+      "shaking and sweating",
+      "unconscious diabetic",
+      "very sleepy",
+      "fruity breath"
+    ],
+    "negative_hints": [
+      "simple hunger only"
+    ],
+    "phrases_en": [
+      "low blood sugar",
+      "high blood sugar emergency",
+      "diabetic emergency",
+      "diabetic feeling shaky",
+      "sugar patient unconscious",
+      "hypoglycemia",
+      "hyperglycemia",
+      "diabetic confused and sweating"
+    ],
+    "phrases_ur": [
+      "شوگر کم ہونا",
+      "شوگر زیادہ ہونا",
+      "شوگر مریض کی ہنگامی حالت",
+      "شوگر مریض بے ہوش",
+      "کمزوری اور پسینہ شوگر میں",
+      "ہائپوگلیسیمیا",
+      "ہائپرگلیسیمیا"
+    ],
+    "phrases_mixed": [
+      "diabetic emergency ہو گئی ہے",
+      "blood sugar بہت low ہو گئی ہے",
+      "sugar patient unconscious hai",
+      "diabetic ko paseena aur confusion ho rahi hai"
+    ]
+  },
+  "asthma_attack": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "asthma attack",
+      "asthma flare",
+      "wheezing",
+      "inhaler not helping"
+    ],
+    "red_flags": [
+      "cannot speak full sentence",
+      "blue lips",
+      "wheezing worsening",
+      "inhaler not helping",
+      "child struggling to breathe"
+    ],
+    "negative_hints": [
+      "nose congestion only",
+      "common cold only"
+    ],
+    "phrases_en": [
+      "asthma attack",
+      "asthma flare",
+      "wheezing and asthma",
+      "inhaler not helping",
+      "child having asthma attack",
+      "tight chest from asthma",
+      "wheezing badly"
+    ],
+    "phrases_ur": [
+      "دمے کا دورہ",
+      "اسthma attack",
+      "سانس میں گھرگھراہٹ",
+      "انہیلر سے فائدہ نہیں ہو رہا",
+      "بچے کو دمے کا دورہ",
+      "دمے سے سینہ جکڑ گیا"
+    ],
+    "phrases_mixed": [
+      "asthma attack ہو رہا ہے",
+      "دمے کا attack آ گیا ہے",
+      "wheezing bohat zyada hai",
+      "inhaler help nahi kar raha",
+      "child ko asthma attack hai"
+    ]
+  },
+  "sprain_strain": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "sprain",
+      "strain",
+      "twisted ankle",
+      "pulled muscle",
+      "rolled ankle"
+    ],
+    "red_flags": [
+      "cannot bear weight",
+      "severe swelling",
+      "deformity",
+      "bone injury suspicion"
+    ],
+    "negative_hints": [
+      "fracture with deformity",
+      "open wound"
+    ],
+    "phrases_en": [
+      "sprain",
+      "muscle strain",
+      "twisted ankle",
+      "pulled muscle",
+      "rolled ankle",
+      "ankle sprain",
+      "strained muscle",
+      "ligament injury"
+    ],
+    "phrases_ur": [
+      "موچ",
+      "پٹھے میں کھچاؤ",
+      "ٹخنہ مڑ جانا",
+      "پٹھا کھنچ جانا",
+      "ٹخنے کی موچ"
+    ],
+    "phrases_mixed": [
+      "ankle sprain ہو گئی ہے",
+      "muscle strain ہو گیا ہے",
+      "twisted ankle ho gaya",
+      "pair mur gaya hai",
+      "pulled muscle lag raha hai"
+    ]
+  },
+  "nosebleed": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "nosebleed",
+      "nose bleeding",
+      "epistaxis",
+      "blood from nose"
+    ],
+    "red_flags": [
+      "bleeding won't stop",
+      "after head injury",
+      "very heavy bleeding",
+      "on blood thinners"
+    ],
+    "negative_hints": [
+      "blood from mouth only"
+    ],
+    "phrases_en": [
+      "nosebleed",
+      "bleeding from the nose",
+      "blood coming from nose",
+      "nose is bleeding",
+      "sudden nosebleed",
+      "nose bleed will not stop"
+    ],
+    "phrases_ur": [
+      "ناک سے خون آنا",
+      "نکسیر",
+      "ناک سے خون بہنا",
+      "ناک سے مسلسل خون آنا"
+    ],
+    "phrases_mixed": [
+      "nosebleed ہو رہی ہے",
+      "ناک سے blood آ رہا ہے",
+      "nose se khoon aa raha hai",
+      "nose bleed stop nahi ho rahi"
+    ]
+  },
+  "cuts_minor_wounds": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "small cut",
+      "minor wound",
+      "scrape",
+      "abrasion",
+      "small skin cut"
+    ],
+    "red_flags": [
+      "dirty wound",
+      "deep cut",
+      "won't stop bleeding",
+      "bite wound"
+    ],
+    "negative_hints": [
+      "deep severe wound",
+      "amputation"
+    ],
+    "phrases_en": [
+      "small cut",
+      "minor wound",
+      "scrape on skin",
+      "skin abrasion",
+      "small cut on finger",
+      "knee scrape",
+      "minor cut bleeding a little"
+    ],
+    "phrases_ur": [
+      "چھوٹا کٹ",
+      "معمولی زخم",
+      "خراش",
+      "ہلکی چوٹ سے جلد چھل جانا",
+      "انگلی پر چھوٹا کٹ"
+    ],
+    "phrases_mixed": [
+      "minor cut لگ گیا ہے",
+      "skin پر scrape آ گیا ہے",
+      "small cut ho gaya hai",
+      "finger pe cut laga hai"
+    ]
+  },
+  "electric_shock": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "electric shock",
+      "electrocution",
+      "current shock",
+      "live wire shock",
+      "lightning strike"
+    ],
+    "red_flags": [
+      "unresponsive after shock",
+      "burn marks",
+      "chest pain after shock",
+      "not breathing",
+      "lightning strike"
+    ],
+    "negative_hints": [
+      "static shock only"
+    ],
+    "phrases_en": [
+      "electric shock",
+      "electrocution",
+      "got shocked by electricity",
+      "touched live wire",
+      "current passed through hand",
+      "electric current shock",
+      "lightning struck someone"
+    ],
+    "phrases_ur": [
+      "بجلی کا جھٹکا",
+      "کرنٹ لگنا",
+      "بجلی سے جھٹکا",
+      "زندہ تار کو چھو لیا",
+      "کرنٹ گزر گیا",
+      "بجلی گرنے کا حادثہ"
+    ],
+    "phrases_mixed": [
+      "electric shock لگ گیا ہے",
+      "کرنٹ لگ گیا ہے",
+      "live wire ne shock diya hai",
+      "lightning strike ho gaya hai"
+    ]
+  },
+  "drowning_near_drowning": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "drowning",
+      "near drowning",
+      "water rescue",
+      "pulled from water",
+      "not breathing after water"
+    ],
+    "red_flags": [
+      "not breathing",
+      "unresponsive",
+      "blue lips",
+      "water inhalation",
+      "child pulled from pool"
+    ],
+    "negative_hints": [
+      "small splash only"
+    ],
+    "phrases_en": [
+      "drowning",
+      "near drowning",
+      "pulled from water and not breathing",
+      "person pulled from pool",
+      "child almost drowned",
+      "water rescue and unconscious",
+      "someone drowned"
+    ],
+    "phrases_ur": [
+      "ڈوب جانا",
+      "ڈوبتے ڈوبتے بچ جانا",
+      "پانی سے نکالا گیا",
+      "پانی میں ڈوب گیا",
+      "بچے کو پانی سے نکالا اور سانس نہیں"
+    ],
+    "phrases_mixed": [
+      "near drowning ہو گئی ہے",
+      "water سے نکالا ہے اور breathing نہیں ہو رہی",
+      "pool se nikala hai aur unconscious hai",
+      "bacha doob gaya tha"
+    ]
+  },
+  "animal_bite": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "animal bite",
+      "dog bite",
+      "cat bite",
+      "rabies exposure",
+      "monkey bite"
+    ],
+    "red_flags": [
+      "deep bite",
+      "rabies concern",
+      "heavy bleeding",
+      "bite on face",
+      "wild animal bite"
+    ],
+    "negative_hints": [
+      "insect sting only"
+    ],
+    "phrases_en": [
+      "animal bite",
+      "dog bite",
+      "bitten by an animal",
+      "cat bite",
+      "monkey bite",
+      "dog bit me",
+      "possible rabies bite"
+    ],
+    "phrases_ur": [
+      "جانور کا کاٹنا",
+      "کتے کا کاٹنا",
+      "جانور نے کاٹ لیا",
+      "بلی نے کاٹ لیا",
+      "ممکنہ ریبیز کاٹنا"
+    ],
+    "phrases_mixed": [
+      "dog bite ہو گیا ہے",
+      "animal نے bite کر لیا ہے",
+      "dog ne kaat liya hai",
+      "cat bite ho gaya hai"
+    ]
+  },
+  "insect_sting": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "insect sting",
+      "bee sting",
+      "wasp sting",
+      "stinger",
+      "bug sting"
+    ],
+    "red_flags": [
+      "lip swelling",
+      "difficulty breathing",
+      "many stings",
+      "sting in mouth",
+      "anaphylaxis"
+    ],
+    "negative_hints": [
+      "animal bite",
+      "snake bite"
+    ],
+    "phrases_en": [
+      "insect sting",
+      "bee sting",
+      "wasp sting",
+      "stung by bee",
+      "stung by wasp",
+      "bug sting",
+      "stinger stuck in skin"
+    ],
+    "phrases_ur": [
+      "کیڑے کا ڈنگ",
+      "مکھی کا ڈنگ",
+      "بھڑ کا ڈنگ",
+      "مکھی نے کاٹ لیا",
+      "ڈنگ چبھ گیا"
+    ],
+    "phrases_mixed": [
+      "bee sting ہو گیا ہے",
+      "insect نے sting کیا ہے",
+      "wasp ne sting kar diya hai",
+      "stinger skin mein reh gaya hai"
+    ]
+  },
+  "chemical_exposure": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "chemical exposure",
+      "chemical burn",
+      "chemical in eye",
+      "fume inhalation",
+      "bleach exposure"
+    ],
+    "red_flags": [
+      "chemical in eye",
+      "breathing trouble after fumes",
+      "large skin area exposed",
+      "severe pain",
+      "caustic chemical"
+    ],
+    "negative_hints": [
+      "normal soap irritation only"
+    ],
+    "phrases_en": [
+      "chemical on skin",
+      "chemical in eye",
+      "inhaled chemical fumes",
+      "bleach in eye",
+      "acid on skin",
+      "chemical burn",
+      "cleaning chemical inhaled",
+      "chemical splash"
+    ],
+    "phrases_ur": [
+      "کیمیکل جلد پر لگ گیا",
+      "کیمیکل آنکھ میں چلا گیا",
+      "کیمیکل کی بھاپ سانس میں گئی",
+      "بلیچ آنکھ میں چلا گیا",
+      "تیزاب جلد پر گر گیا",
+      "کیمیکل سے جل جانا"
+    ],
+    "phrases_mixed": [
+      "chemical exposure ہو گئی ہے",
+      "chemical eye میں چلا گیا ہے",
+      "bleach eye mein chala gaya",
+      "fumes inhale ho gayi hain",
+      "acid skin par gir gaya"
+    ]
+  },
+  "headache": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "headache",
+      "bad headache",
+      "severe headache",
+      "head pain",
+      "migraine"
+    ],
+    "red_flags": [
+      "sudden worst headache",
+      "headache with weakness",
+      "headache after injury",
+      "fever and stiff neck",
+      "vomiting with headache"
+    ],
+    "negative_hints": [
+      "face drooping",
+      "one side weakness",
+      "room spinning only"
+    ],
+    "phrases_en": [
+      "headache",
+      "severe headache",
+      "bad headache",
+      "mild headache",
+      "throbbing headache",
+      "head pain",
+      "migraine",
+      "my father has a headache",
+      "child has headache"
+    ],
+    "phrases_ur": [
+      "سر درد",
+      "شدید سر درد",
+      "بہت زیادہ سر درد",
+      "ہلکا سر درد",
+      "دھڑکتا ہوا سر درد",
+      "مائیگرین",
+      "میرے والد کو سر درد ہے"
+    ],
+    "phrases_mixed": [
+      "headache ہو رہا ہے",
+      "سر درد ہو رہا ہے",
+      "sir dard bohat zyada hai",
+      "migraine jaisa pain hai",
+      "my father ko headache hai"
+    ]
+  },
+  "dental_injury": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "knocked out tooth",
+      "broken tooth",
+      "dental trauma",
+      "tooth injury",
+      "lost tooth after hit"
+    ],
+    "red_flags": [
+      "permanent tooth knocked out",
+      "heavy bleeding from mouth",
+      "jaw injury",
+      "child tooth knocked out after fall"
+    ],
+    "negative_hints": [
+      "toothache only",
+      "gum pain only"
+    ],
+    "phrases_en": [
+      "knocked out tooth",
+      "broken tooth after injury",
+      "tooth got knocked out",
+      "tooth broke after fall",
+      "front tooth came out",
+      "dental injury"
+    ],
+    "phrases_ur": [
+      "دانت ٹوٹ جانا",
+      "دانت نکل جانا",
+      "چوٹ سے دانت نکل گیا",
+      "دانت گر گیا",
+      "منہ پر چوٹ سے دانت ٹوٹ گیا"
+    ],
+    "phrases_mixed": [
+      "tooth نکل گیا ہے",
+      "broken tooth ہو گیا ہے",
+      "tooth toot gaya hai",
+      "dental injury ho gayi hai"
+    ]
+  },
+  "spinal_injury": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "spinal injury",
+      "neck injury",
+      "back injury cannot move",
+      "possible spine injury",
+      "neck trauma"
+    ],
+    "red_flags": [
+      "cannot move legs",
+      "numbness",
+      "fall from height",
+      "neck pain after accident",
+      "suspected spinal cord injury"
+    ],
+    "negative_hints": [
+      "simple muscle back pain only"
+    ],
+    "phrases_en": [
+      "spinal injury",
+      "neck injury after fall",
+      "back injury and cannot move",
+      "possible spine injury",
+      "cannot move legs after fall",
+      "neck trauma after accident"
+    ],
+    "phrases_ur": [
+      "ریڑھ کی ہڈی کی چوٹ",
+      "گردن پر شدید چوٹ",
+      "کمر کی چوٹ اور حرکت نہ ہونا",
+      "سپائن انجری کا شبہ",
+      "گرنے کے بعد ٹانگیں نہیں ہل رہیں"
+    ],
+    "phrases_mixed": [
+      "spine injury ہو گئی ہے",
+      "neck پر serious injury ہے",
+      "back injury hai aur move nahi kar raha",
+      "spinal cord injury lag rahi hai"
+    ]
+  },
+  "amputation_avulsion": {
+    "severity": "critical",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "amputation",
+      "severed finger",
+      "severed limb",
+      "body part cut off",
+      "avulsion"
+    ],
+    "red_flags": [
+      "part fully detached",
+      "severe bleeding",
+      "crushed detached finger",
+      "partial amputation",
+      "shock"
+    ],
+    "negative_hints": [
+      "small cut only"
+    ],
+    "phrases_en": [
+      "finger got cut off",
+      "severed limb",
+      "body part partially cut off",
+      "amputation injury",
+      "finger severed",
+      "hand part cut off"
+    ],
+    "phrases_ur": [
+      "انگلی کٹ گئی",
+      "جسم کا حصہ الگ ہو گیا",
+      "ہاتھ یا پاؤں کا حصہ کٹ گیا",
+      "انگلی الگ ہو گئی",
+      "جسم کا حصہ آدھا لٹک رہا ہے"
+    ],
+    "phrases_mixed": [
+      "finger cut off ہو گئی ہے",
+      "body part الگ ہو گیا ہے",
+      "ungli cut off ho gayi hai",
+      "partial amputation ho gayi hai"
+    ]
+  },
+  "splinter_embedded_object": {
+    "severity": "routine",
+    "age_focus": [
+      "general",
+      "adult",
+      "child"
+    ],
+    "aliases": [
+      "splinter",
+      "glass stuck in skin",
+      "embedded object",
+      "thorn in skin",
+      "foreign object in skin"
+    ],
+    "red_flags": [
+      "object near eye",
+      "deeply embedded",
+      "dirty wound",
+      "cannot remove",
+      "large glass piece"
+    ],
+    "negative_hints": [
+      "something stuck in throat",
+      "foreign body in eye"
+    ],
+    "phrases_en": [
+      "splinter in skin",
+      "glass stuck in skin",
+      "embedded object in skin",
+      "thorn in finger",
+      "wood splinter",
+      "piece of glass under skin"
+    ],
+    "phrases_ur": [
+      "کانٹا چبھ جانا",
+      "جلد میں شیشہ پھنس جانا",
+      "جلد میں کوئی چیز پھنس جانا",
+      "انگلی میں کانٹا",
+      "جلد کے اندر شیشہ پھنس گیا"
+    ],
+    "phrases_mixed": [
+      "splinter skin میں پھنس گیا ہے",
+      "glass skin میں stuck ہے",
+      "kaanTa finger mein chubh gaya hai",
+      "object skin ke andar phans gaya hai"
+    ]
+  },
+  "dehydration": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "adult",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "dehydration",
+      "too little water",
+      "water loss",
+      "dry mouth and weakness",
+      "fluid loss"
+    ],
+    "red_flags": [
+      "very sleepy",
+      "sunken eyes",
+      "no urine",
+      "fast heartbeat",
+      "infant dehydration"
+    ],
+    "negative_hints": [
+      "mild thirst only"
+    ],
+    "phrases_en": [
+      "dehydration",
+      "signs of dehydration",
+      "too little water and weakness",
+      "severely dehydrated",
+      "dry mouth and dizziness",
+      "child dehydration",
+      "no urine and weakness"
+    ],
+    "phrases_ur": [
+      "پانی کی کمی",
+      "ڈی ہائیڈریشن",
+      "کمزوری اور پانی کی کمی",
+      "شدید پانی کی کمی",
+      "منہ خشک ہونا اور کمزوری",
+      "بچے میں پانی کی کمی"
+    ],
+    "phrases_mixed": [
+      "dehydration ہو گئی ہے",
+      "water ki kami ہو گئی ہے",
+      "bohat dehydration lag rahi hai",
+      "dry mouth aur weakness hai"
+    ]
+  },
+  "foreign_body_nose_ear": {
+    "severity": "urgent",
+    "age_focus": [
+      "general",
+      "child",
+      "infant"
+    ],
+    "aliases": [
+      "object in nose",
+      "object in ear",
+      "foreign body in nose",
+      "foreign body in ear"
+    ],
+    "red_flags": [
+      "battery in nose",
+      "battery in ear",
+      "child inserted bead",
+      "difficulty breathing",
+      "bleeding from nose or ear"
+    ],
+    "negative_hints": [
+      "eye injury",
+      "splinter in skin",
+      "choking food in throat"
+    ],
+    "phrases_en": [
+      "object stuck in nose",
+      "something stuck in ear",
+      "foreign object in nose",
+      "foreign object in ear",
+      "child put bead in nose",
+      "child put object in ear"
+    ],
+    "phrases_ur": [
+      "ناک میں چیز پھنس جانا",
+      "کان میں کوئی چیز چلی جانا",
+      "ناک میں دانہ پھنس گیا",
+      "کان میں چیز چلی گئی"
+    ],
+    "phrases_mixed": [
+      "nose mein kuch phans gaya hai",
+      "ear mein object chala gaya hai",
+      "bache ne nose mein bead daal liya hai",
+      "kaan mein cheez phans gayi hai"
+    ]
+  }
+}

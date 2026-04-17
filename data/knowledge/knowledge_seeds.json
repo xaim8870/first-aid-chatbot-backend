@@ -1,0 +1,956 @@
+{
+  "bleeding": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening bleeding",
+      "bleeding with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی bleeding",
+      "bleeding کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for bleeding.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "bleeding کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "bleeding"
+    ],
+    "keywords_ur": [
+      "bleeding"
+    ]
+  },
+  "allergic_reaction": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening allergic reaction",
+      "allergic reaction with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی allergic reaction",
+      "allergic reaction کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for allergic reaction.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "allergic reaction کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "allergic reaction"
+    ],
+    "keywords_ur": [
+      "allergic reaction"
+    ]
+  },
+  "poisoning": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening poisoning",
+      "poisoning with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی poisoning",
+      "poisoning کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for poisoning.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "poisoning کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "poisoning"
+    ],
+    "keywords_ur": [
+      "poisoning"
+    ]
+  },
+  "vertigo": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening vertigo",
+      "vertigo with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی vertigo",
+      "vertigo کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for vertigo.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "vertigo کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "vertigo"
+    ],
+    "keywords_ur": [
+      "vertigo"
+    ]
+  },
+  "fainting": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening fainting",
+      "fainting with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی fainting",
+      "fainting کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for fainting.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "fainting کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "fainting"
+    ],
+    "keywords_ur": [
+      "fainting"
+    ]
+  },
+  "seizure": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening seizure",
+      "seizure with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی seizure",
+      "seizure کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for seizure.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "seizure کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "seizure"
+    ],
+    "keywords_ur": [
+      "seizure"
+    ]
+  },
+  "burns": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "large burn",
+      "burn on face, hands, genitals, or major joints",
+      "electrical or chemical burn",
+      "trouble breathing after a burn"
+    ],
+    "red_flags_ur": [
+      "بڑا جلنا",
+      "چہرے، ہاتھ، جنسی اعضا یا بڑے جوڑ پر جلنا",
+      "بجلی یا کیمیکل سے جلنا",
+      "جلنے کے بعد سانس میں مشکل"
+    ],
+    "care_en": [
+      "Cool the burn under cool running water for at least 20 minutes.",
+      "Remove jewelry or tight items before swelling starts, if not stuck to the skin.",
+      "Cover loosely with clean non-fluffy material or cling film; do not apply ice, butter, or toothpaste."
+    ],
+    "care_ur": [
+      "جلنے والی جگہ کو کم از کم 20 منٹ ٹھنڈے بہتے پانی کے نیچے رکھیں۔",
+      "اگر جلد سے نہ چپکا ہو تو سوجن سے پہلے زیور یا تنگ چیز ہٹا دیں۔",
+      "صاف اور نرمی سے ڈھانپیں؛ برف، مکھن یا ٹوتھ پیسٹ نہ لگائیں۔"
+    ],
+    "keywords_en": [
+      "burn",
+      "scald",
+      "hot water burn",
+      "hot tea burn"
+    ],
+    "keywords_ur": [
+      "جلنا",
+      "گرم پانی سے جلنا",
+      "ہاتھ جل گیا"
+    ]
+  },
+  "fracture": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening fracture",
+      "fracture with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی fracture",
+      "fracture کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for fracture.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "fracture کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "fracture"
+    ],
+    "keywords_ur": [
+      "fracture"
+    ]
+  },
+  "shock": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening shock",
+      "shock with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی shock",
+      "shock کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for shock.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "shock کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "shock"
+    ],
+    "keywords_ur": [
+      "shock"
+    ]
+  },
+  "choking": {
+    "severity": "critical",
+    "red_flags_en": [
+      "cannot speak or cough",
+      "silent choking",
+      "turning blue"
+    ],
+    "red_flags_ur": [
+      "بول یا کھانس نہ سکے",
+      "خاموش دم گھٹنا",
+      "نیلا پڑنا"
+    ],
+    "care_en": [
+      "If the person cannot cough or speak, call emergency help.",
+      "Give up to 5 back blows between the shoulder blades.",
+      "If still choking, give up to 5 abdominal thrusts unless the person is a baby under 1 year or pregnant."
+    ],
+    "care_ur": [
+      "اگر شخص نہ کھانس سکے نہ بول سکے تو فوراً مدد بلائیں۔",
+      "کندھوں کے درمیان 5 تک پشت پر ضربیں دیں۔",
+      "اگر پھر بھی مسئلہ رہے تو پیٹ پر 5 تک thrusts دیں، مگر ایک سال سے کم بچے یا حاملہ خاتون میں نہیں۔"
+    ],
+    "keywords_en": [
+      "choking",
+      "food stuck",
+      "can't breathe",
+      "can't speak"
+    ],
+    "keywords_ur": [
+      "دم گھٹنا",
+      "سانس بند",
+      "گلے میں چیز پھنس گئی"
+    ]
+  },
+  "temperature_emergency": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening temperature emergency",
+      "temperature emergency with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی temperature emergency",
+      "temperature emergency کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for temperature emergency.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "temperature emergency کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "temperature emergency"
+    ],
+    "keywords_ur": [
+      "temperature emergency"
+    ]
+  },
+  "snake_bite": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening snake bite",
+      "snake bite with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی snake bite",
+      "snake bite کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for snake bite.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "snake bite کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "snake bite"
+    ],
+    "keywords_ur": [
+      "snake bite"
+    ]
+  },
+  "head_injury": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening head injury",
+      "head injury with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی head injury",
+      "head injury کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for head injury.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "head injury کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "head injury"
+    ],
+    "keywords_ur": [
+      "head injury"
+    ]
+  },
+  "chest_pain": {
+    "severity": "critical",
+    "red_flags_en": [
+      "sudden chest pain",
+      "chest pain with sweating",
+      "pain spreading to arm, jaw, or back",
+      "shortness of breath or collapse"
+    ],
+    "red_flags_ur": [
+      "اچانک سینے میں درد",
+      "سینے کے درد کے ساتھ پسینہ",
+      "درد کا بازو، جبڑے یا کمر تک جانا",
+      "سانس پھولنا یا گر جانا"
+    ],
+    "care_en": [
+      "Call emergency services immediately.",
+      "Help the person sit down and keep them as still as possible.",
+      "Loosen tight clothing and do not leave them alone."
+    ],
+    "care_ur": [
+      "فوراً ایمرجنسی سروس کو کال کریں۔",
+      "مریض کو بٹھائیں اور زیادہ حرکت نہ کرنے دیں۔",
+      "تنگ کپڑے ڈھیلے کریں اور مریض کو اکیلا نہ چھوڑیں۔"
+    ],
+    "keywords_en": [
+      "chest pain",
+      "heart attack",
+      "tightness",
+      "sweating"
+    ],
+    "keywords_ur": [
+      "سینے میں درد",
+      "دل کا دورہ",
+      "پسینہ"
+    ]
+  },
+  "breathing_difficulty": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening breathing difficulty",
+      "breathing difficulty with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی breathing difficulty",
+      "breathing difficulty کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for breathing difficulty.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "breathing difficulty کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "breathing difficulty"
+    ],
+    "keywords_ur": [
+      "breathing difficulty"
+    ]
+  },
+  "severe_wound": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening severe wound",
+      "severe wound with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی severe wound",
+      "severe wound کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for severe wound.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "severe wound کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "severe wound"
+    ],
+    "keywords_ur": [
+      "severe wound"
+    ]
+  },
+  "eye_injury": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening eye injury",
+      "eye injury with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی eye injury",
+      "eye injury کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for eye injury.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "eye injury کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "eye injury"
+    ],
+    "keywords_ur": [
+      "eye injury"
+    ]
+  },
+  "first_aid_kit_contents": {
+    "severity": "routine",
+    "red_flags_en": [
+      "severe or worsening first aid kit contents",
+      "first aid kit contents with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی first aid kit contents",
+      "first aid kit contents کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for first aid kit contents.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "first aid kit contents کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "first aid kit contents"
+    ],
+    "keywords_ur": [
+      "first aid kit contents"
+    ]
+  },
+  "basic_first_aid_principles": {
+    "severity": "routine",
+    "red_flags_en": [
+      "severe or worsening basic first aid principles",
+      "basic first aid principles with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی basic first aid principles",
+      "basic first aid principles کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for basic first aid principles.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "basic first aid principles کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "basic first aid principles"
+    ],
+    "keywords_ur": [
+      "basic first aid principles"
+    ]
+  },
+  "emergency_response_guidelines": {
+    "severity": "routine",
+    "red_flags_en": [
+      "severe or worsening emergency response guidelines",
+      "emergency response guidelines with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی emergency response guidelines",
+      "emergency response guidelines کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for emergency response guidelines.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "emergency response guidelines کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "emergency response guidelines"
+    ],
+    "keywords_ur": [
+      "emergency response guidelines"
+    ]
+  },
+  "cpr_resuscitation": {
+    "severity": "critical",
+    "red_flags_en": [
+      "unresponsive and not breathing",
+      "only gasping"
+    ],
+    "red_flags_ur": [
+      "بے ہوش اور سانس نہیں",
+      "صرف ہانپ رہا ہو"
+    ],
+    "care_en": [
+      "Call emergency services and get an AED if available.",
+      "Start chest compressions in the center of the chest.",
+      "If trained, give rescue breaths with compressions."
+    ],
+    "care_ur": [
+      "ایمرجنسی سروس کو کال کریں اور اگر AED ہو تو منگوائیں۔",
+      "سینے کے درمیان compressions شروع کریں۔",
+      "اگر تربیت یافتہ ہوں تو compressions کے ساتھ rescue breaths دیں۔"
+    ],
+    "keywords_en": [
+      "CPR",
+      "resuscitation",
+      "not breathing",
+      "unresponsive"
+    ],
+    "keywords_ur": [
+      "سی پی آر",
+      "سانس نہیں",
+      "بے ہوش"
+    ]
+  },
+  "recovery_position": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "unconscious but breathing"
+    ],
+    "red_flags_ur": [
+      "بے ہوش مگر سانس لے رہا ہو"
+    ],
+    "care_en": [
+      "If the person is unresponsive but breathing normally, place them on their side.",
+      "Tilt the head back slightly to help keep the airway open.",
+      "Monitor breathing until help arrives."
+    ],
+    "care_ur": [
+      "اگر شخص بے ہوش ہو مگر سانس لے رہا ہو تو اسے پہلو کے بل رکھیں۔",
+      "سر کو ہلکا سا پیچھے کی طرف رکھیں تاکہ ہوا کی نالی کھلی رہے۔",
+      "مدد آنے تک سانس پر نظر رکھیں۔"
+    ],
+    "keywords_en": [
+      "recovery position",
+      "unconscious but breathing"
+    ],
+    "keywords_ur": [
+      "ریکوری پوزیشن",
+      "بے ہوش مگر سانس لے رہا ہو"
+    ]
+  },
+  "stroke_signs": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening stroke signs",
+      "stroke signs with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی stroke signs",
+      "stroke signs کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for stroke signs.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "stroke signs کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "stroke signs"
+    ],
+    "keywords_ur": [
+      "stroke signs"
+    ]
+  },
+  "diabetic_emergency": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening diabetic emergency",
+      "diabetic emergency with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی diabetic emergency",
+      "diabetic emergency کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for diabetic emergency.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "diabetic emergency کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "diabetic emergency"
+    ],
+    "keywords_ur": [
+      "diabetic emergency"
+    ]
+  },
+  "asthma_attack": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening asthma attack",
+      "asthma attack with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی asthma attack",
+      "asthma attack کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for asthma attack.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "asthma attack کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "asthma attack"
+    ],
+    "keywords_ur": [
+      "asthma attack"
+    ]
+  },
+  "sprain_strain": {
+    "severity": "routine",
+    "red_flags_en": [
+      "severe or worsening sprain strain",
+      "sprain strain with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی sprain strain",
+      "sprain strain کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for sprain strain.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "sprain strain کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "sprain strain"
+    ],
+    "keywords_ur": [
+      "sprain strain"
+    ]
+  },
+  "nosebleed": {
+    "severity": "routine",
+    "red_flags_en": [
+      "severe or worsening nosebleed",
+      "nosebleed with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی nosebleed",
+      "nosebleed کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for nosebleed.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "nosebleed کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "nosebleed"
+    ],
+    "keywords_ur": [
+      "nosebleed"
+    ]
+  },
+  "cuts_minor_wounds": {
+    "severity": "routine",
+    "red_flags_en": [
+      "severe or worsening cuts minor wounds",
+      "cuts minor wounds with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی cuts minor wounds",
+      "cuts minor wounds کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for cuts minor wounds.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "cuts minor wounds کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "cuts minor wounds"
+    ],
+    "keywords_ur": [
+      "cuts minor wounds"
+    ]
+  },
+  "electric_shock": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening electric shock",
+      "electric shock with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی electric shock",
+      "electric shock کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for electric shock.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "electric shock کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "electric shock"
+    ],
+    "keywords_ur": [
+      "electric shock"
+    ]
+  },
+  "drowning_near_drowning": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening drowning near drowning",
+      "drowning near drowning with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی drowning near drowning",
+      "drowning near drowning کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for drowning near drowning.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "drowning near drowning کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "drowning near drowning"
+    ],
+    "keywords_ur": [
+      "drowning near drowning"
+    ]
+  },
+  "animal_bite": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening animal bite",
+      "animal bite with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی animal bite",
+      "animal bite کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for animal bite.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "animal bite کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "animal bite"
+    ],
+    "keywords_ur": [
+      "animal bite"
+    ]
+  },
+  "insect_sting": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening insect sting",
+      "insect sting with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی insect sting",
+      "insect sting کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for insect sting.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "insect sting کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "insect sting"
+    ],
+    "keywords_ur": [
+      "insect sting"
+    ]
+  },
+  "chemical_exposure": {
+    "severity": "urgent",
+    "red_flags_en": [
+      "severe or worsening chemical exposure",
+      "chemical exposure with trouble breathing, confusion, fainting, or major bleeding"
+    ],
+    "red_flags_ur": [
+      "شدید یا بگڑتی ہوئی chemical exposure",
+      "chemical exposure کے ساتھ سانس میں مشکل، بے ہوشی، الجھن، یا بہت زیادہ خون"
+    ],
+    "care_en": [
+      "Give first aid appropriate for chemical exposure.",
+      "Keep the person safe and calm.",
+      "Seek medical help if symptoms are severe, persistent, or worsening."
+    ],
+    "care_ur": [
+      "chemical exposure کی صورت میں مناسب ابتدائی طبی امداد دیں۔",
+      "مریض کو محفوظ اور پُرسکون رکھیں۔",
+      "علامات شدید ہوں یا بڑھ رہی ہوں تو طبی مدد حاصل کریں۔"
+    ],
+    "keywords_en": [
+      "chemical exposure"
+    ],
+    "keywords_ur": [
+      "chemical exposure"
+    ]
+  },
+  "headache": {
+    "severity": "routine",
+    "red_flags_en": [
+      "sudden severe headache",
+      "headache after a head injury",
+      "headache with confusion, weakness, fainting, fever, or repeated vomiting"
+    ],
+    "red_flags_ur": [
+      "اچانک بہت شدید سر درد",
+      "سر پر چوٹ کے بعد سر درد",
+      "سر درد کے ساتھ بے ہوشی، کمزوری، بخار، یا بار بار الٹی"
+    ],
+    "care_en": [
+      "Help the person rest in a quiet, dim place if possible.",
+      "Encourage fluids if they can drink safely.",
+      "Avoid giving medicine unless it is appropriate for that person and you know it is safe."
+    ],
+    "care_ur": [
+      "مریض کو پرسکون اور نسبتاً اندھیری جگہ پر آرام کروائیں۔",
+      "اگر محفوظ ہو تو پانی یا مناسب مشروب دیں۔",
+      "کوئی دوا صرف اسی صورت دیں جب وہ اس شخص کے لیے محفوظ اور مناسب ہو۔"
+    ],
+    "keywords_en": [
+      "headache",
+      "head pain",
+      "migraine",
+      "sar dard"
+    ],
+    "keywords_ur": [
+      "سر درد",
+      "شدید سر درد"
+    ]
+  }
+}
