@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+requests
+huggingface_hub
+rapidfuzz
+rank-bm25
+numpy
